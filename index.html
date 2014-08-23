@@ -53,6 +53,44 @@
     	font-family: "Raleway", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     	font-weight: bold;
     }
+
+    /* 
+      Breakpoint: viewport too narrow for two-column, go to one column (as per bootstrap CSS) 
+    */
+    @media (max-width:768px) {
+      /* Lets make the images fill up the entire viewport so we can actually see them. */
+      .img-thumbnail {
+        width: 100%;
+      }
+
+      /* Measure of the introductory text becomes too narrow. Widen it. */
+      #top .jumbotron #under-logo {
+        padding-left: 0;
+        margin-top: 20px;
+      }
+    }
+
+    /* 
+      Breakpoint: the syncthing logo stops looking good. Start scaling it down with the viewport. 
+    */
+    @media (max-width: 590px) {
+      #syncthing-logo {
+        width: 100%;
+      }
+
+      /* Also remove the top margin on the h1 — too much headroom. */
+      h1 { margin-top: 0;}
+
+      /* 
+        And let’s also make the size of the introductory text a bit smaller so that users don’t
+        have to scroll too far to get to the main content.
+      */
+      #top .jumbotron #under-logo {
+        font-size: 14px;
+        margin-top: 10px;
+      }
+
+    }
   </style>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
   <script type="text/javascript" src="https://blockchain.info//Resources/wallet/pay-now-button.js"></script>
@@ -69,7 +107,7 @@
     <div class="container-fluid container">
       <div class="jumbotron">
         <div class="col-md-12">
-          <h1><img alt="Syncthing" title="Syncthing" src="logo-text-256.png" height="128" width="468"></h1>
+          <h1><img alt="Syncthing" id='syncthing-logo' title="Syncthing" src="logo-text-256.png" width="468"></h1>
           <p id="under-logo">Syncthing replaces proprietary sync and cloud services with something open, trustworthy and decentralized. Your data is your data alone and <em>you</em> deserve to choose where it is stored, if it is shared with some third party and how it's transmitted
             over the Internet.</p>
         </div>
