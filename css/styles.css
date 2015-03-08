@@ -1,0 +1,112 @@
+html,
+body {
+	font-size: 1em;
+}
+
+h1, h2, h3, h4, h5, strong {
+	font-family: "Raleway", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-weight: bold;
+}
+
+.jumbotron h1 {
+  color: #0891d1;
+  font-weight: bold;
+  font-size: 5rem;
+}
+
+h1 span{
+  padding-left: 2.8rem;
+}
+
+.jumbotron h1 img{
+  height: 5rem;
+}
+
+li {
+	margin-bottom: 0.75em;
+}
+
+.top {
+	background-image: url(../images/bg.jpg);
+	background-position: center;
+	background-size: cover;
+}
+
+.top .jumbotron {
+	margin: 4rem auto;
+	background: rgba(255, 255, 255, 0.70);
+	color: #0675a8;
+	font-family: "Raleway", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-weight: bold;
+}
+
+.under-logo {
+	padding-left: 9rem;
+}
+
+.container > .row {
+	margin-top: 2.5rem;
+	margin-bottom: 2.5rem;
+}
+
+.title {
+	margin-right: 0.938rem;
+}
+
+.extra {
+	margin-bottom:0.625rem;
+	font-size: 2.5rem;
+}
+
+.attribution {
+	float: right;
+	color: white;
+}
+
+.attribution a {
+	color: white;
+	font-weight: bold;
+}
+
+@media (max-width: 630px) {
+
+  .top .container{
+    margin: 0;
+    padding: 0;
+  }
+  .container .jumbotron{
+    border-radius: 0;
+  }
+
+  .jumbotron h1 {
+    font-size: 3rem;
+  }
+
+  h1 img{
+    height: 4rem;
+  }
+
+  h1 span{
+    padding-left: 0rem;
+  }
+
+  .under-logo {
+  	padding-left: 0rem;
+  }
+}
+
+/*
+Breakpoint: viewport too narrow for two-column, go to one column (as per bootstrap CSS)
+*/
+@media (max-width:768px) {
+	/* Lets make the images fill up the entire viewport so we can actually see them. */
+	.img-thumbnail {
+		width: 100%;
+	}
+
+	/* Measure of the introductory text becomes too narrow. Widen it. */
+	.top .jumbotron #under-logo {
+		padding-left: 0;
+		margin-top: 20px;
+	}
+}
