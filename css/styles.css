@@ -99,6 +99,11 @@ li {
 Breakpoint: viewport too narrow for two-column, go to one column (as per bootstrap CSS)
 */
 @media (max-width:768px) {
+
+  .top {
+  	background-image: url(../images/bg.jpg);
+  }
+  
 	/* Lets make the images fill up the entire viewport so we can actually see them. */
 	.img-thumbnail {
 		width: 100%;
