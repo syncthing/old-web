@@ -11,15 +11,11 @@ h1, h2, h3, h4, h5, strong {
 .jumbotron h1 {
   color: #0891d1;
   font-weight: bold;
-  font-size: 5rem;
-}
-
-h1 span{
-  padding-left: 2.8rem;
+  font-size: 4rem;
 }
 
 .jumbotron h1 img{
-  height: 5rem;
+  height: 8.125rem;
 }
 
 li {
@@ -41,7 +37,7 @@ li {
 }
 
 .under-logo {
-	padding-left: 9rem;
+	padding-left: 9.3rem;
 }
 
 .container > .row {
@@ -87,12 +83,8 @@ li {
     font-size: 3rem;
   }
 
-  h1 img{
+	.jumbotron h1 img{
     height: 4rem;
-  }
-
-  h1 span{
-    padding-left: 0rem;
   }
 
   .under-logo {
