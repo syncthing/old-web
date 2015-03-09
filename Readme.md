@@ -21,4 +21,4 @@ current metrics (before March 9th 2015)
 * 69% desktop
 
 webpagetest.org
-* speed index 6085 (really bad), see http://www.webpagetest.org/result/150309_58_40531a3fd0a4b88421218eb26af99f91/
+* speed index 6085 (profile 3G fast, really bad), see http://www.webpagetest.org/result/150309_58_40531a3fd0a4b88421218eb26af99f91/
