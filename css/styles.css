@@ -64,6 +64,10 @@ li {
 	font-weight: bold;
 }
 
+.security-logo{
+  max-width: 100%;
+}
+
 /* github ribbon */
 .github-fork-ribbon {
   background-color: grey;
