@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
 <html lang="en">
+
 <head>
     <title>Syncthing</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="shortcut icon" href="images/favicon.png" type="image/png">
-
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/favicons/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicons/apple-touch-icon-72x72.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicons/apple-touch-icon-114x114.png" />
@@ -14,235 +14,241 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/favicons/apple-touch-icon-152x152.png" />
     <link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16" />
-    <meta name="application-name" content="Syncthing"/>
+    <meta name="application-name" content="Syncthing" />
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png" />
-
-
-    <link rel="stylesheet" type="text/css" href="bower_components/fontawesome/css/font-awesome.css" >
+    <link rel="stylesheet" type="text/css" href="bower_components/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="bower_components/github-fork-ribbon-css/gh-fork-ribbon.css">
-    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/raleway.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-
-    <meta name="google-site-verification" content="YnpYvLrQHPxuSb2e0CqhZ9WU3yuET5BwGHczvoAMB9Y"/>
+    <meta name="google-site-verification" content="YnpYvLrQHPxuSb2e0CqhZ9WU3yuET5BwGHczvoAMB9Y" />
     <script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-			ga('create', 'UA-1060342-17', 'auto');
-			ga('send', 'pageview');
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-1060342-17', 'auto');
+    ga('send', 'pageview');
     </script>
 </head>
 
 <body>
-  <div class="github-fork-ribbon-wrapper right">
-      <div class="github-fork-ribbon">
-          <a target="_blank" href="https://github.com/syncthing/syncthing">Fork me on GitHub</a>
-      </div>
-  </div>
-
-	<div class="top">
-	    <div class="container-fluid container">
-	        <div class="jumbotron">
-	            <h1>
-                <img alt="Syncthing" id='syncthing-logo' title="Syncthing" src="images/logo-horizontal.svg"/>
-              </h1>
-
-	            <p class="under-logo">Syncthing replaces proprietary sync and cloud services with something open, trustworthy and decentralized. Your data is your data alone and
-	                <em>you</em> deserve to choose where it is stored, if it is shared with some third party and how it's transmitted
-	                over the Internet.</p>
-	        </div>
-	        <small class="attribution"><a href="https://www.flickr.com/photos/iamjanosik/14286545284/">Photo</a> by Steve Janosic / <a
-	                href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY-NC-ND</a></small>
-	    </div>
-	</div>
-	<div id="main">
-	    <div class="container">
-	        <div class="row">
-	            <div class="col-md-12">
-	                <h2><i class="title fa fa-download"></i>Get Started</h2>
-	                <hr/>
-
-	                <div class="row">
-	                    <div class="col-md-6">
-	                        <h3 class="text-center">Windows, Linux, Mac, BSD and Solaris</h3>
-
-	                        <p class="text-center">
-	                            <a class="btn btn-primary btn-lg" href="https://github.com/syncthing/syncthing/releases/latest"><i class="fa fa-github"></i>&nbsp;Download from
-	                                GitHub</a>
-	                        </p>
-
-	                        <p class="text-center">Make sure to check out the <a href="https://github.com/syncthing/syncthing/wiki/Getting-Started">Getting Started Guide</a> if you
-	                            need help. Releases are signed as described on the <a href="security.html">security</a> page.</p>
-	                    </div>
-	                    <div class="col-md-6 text-center">
-	                        <h3>Third party contributions</h3>
-
-	                        <p>
-	                            <a href="https://github.com/syncthing/syncthing-android">Android app</a>
-	                        </p>
-
-	                        <p>
-	                            <a href="https://play.google.com/store/apps/details?id=com.nutomic.syncthingandroid"><img alt="Get it on Google Play"
-	                                                                                                                      src="https://developer.android.com/images/brand/en_generic_rgb_wo_60.png"></a>
-	                            <a href="https://f-droid.org/repository/browse/?fdid=com.nutomic.syncthingandroid"><img alt="Get it on F-Droid"
-	                                                                                                                    src="https://f-droid.org/wiki/images/0/06/F-Droid-button_get-it-on.png"></a>
-	                        </p>
-
-	                        <p>
-	                            <a href="https://github.com/syncthing/syncthing-gtk">Cross platform GUI wrapper</a>,
-	                            <a href="https://github.com/syncthing/syncthing-inotify/releases/latest">filesystem watcher</a>,
-	                            and <a href="https://github.com/syncthing/syncthing/wiki/Community-Contributions">other</a> community contributions.
-	                        </p>
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-
-	        <div class="row">
-	            <div class="col-sm-12">
-	                <h2><i class="title fa fa-lock"></i>Secure &amp; Private</h2>
-	                <hr/>
-	                <div class="row">
-	                    <div class="col-sm-8">
-	                        <ul>
-	                            <li><strong>Private.</strong> None of your data is ever stored anywhere else than on your computers. There is no central server that might be
-	                                compromised, legally or illegally.
-	                            </li>
-	                            <li><strong>Encrypted.</strong> All communication is secured using TLS. The encryption used includes perfect forward secrecy to prevent any eavesdropper
-	                                from ever gaining access to your data.
-	                            </li>
-	                            <li><strong>Authenticated.</strong> Every node is identified by a strong cryptographic certificate. Only nodes you have explicitly allowed can connect
-	                                to your cluster.
-	                            </li>
-	                        </ul>
-	                    </div>
-	                    <div class="col-sm-4">
-	                        <img src="images/rsa.jpg" alt="rsa" width="360" class="img-thumbnail">
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-
-	        <div class="row">
-	            <div class="col-sm-12">
-	                <h2><i class="title fa fa-code-fork"></i>Open Development</h2>
-	                <hr/>
-	                <div class="row">
-	                    <div class="col-sm-8">
-	                        <p></p>
-	                        <ul>
-	                            <li><strong>Open Discourse.</strong> Development and usage is always open for discussion.
-	                                <br><a target="_blank" href="http://discourse.syncthing.net/">Syncthing Discussion Forum</a>
-	                            </li>
-	                            <li><strong>Open Source.</strong> All source code is available on GitHub &mdash; what you see is what you get, there is no hidden funny business.
-	                                <br><a target="_blank" href="https://github.com/syncthing/syncthing/tree/master">Syncthing Source Code</a>
-	                            </li>
-	                            <li><strong>Open Protocol.</strong> The protocol is a documented standard &mdash; no hidden magic.
-	                                <br><a target="_blank" href="https://github.com/syncthing/specs/blob/master/BEPv1.md">Syncthing Protocol Definition</a>
-	                            </li>
-	                            <li><strong>Open Development.</strong> Any bugs found are immediately visible for anyone to browse &mdash; no hidden flaws.
-	                                <br><a target="_blank" href="https://github.com/syncthing/syncthing/issues?state=open">Syncthing Issue Tracker</a>
-	                            </li>
-	                        </ul>
-	                    </div>
-	                    <div class="col-sm-4">
-	                        <img src="images/code.jpg" alt="code" width="360" class="img-thumbnail">
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-	        <div class="row">
-	            <div class="col-sm-12">
-	                <h2><i class="title fa fa-users"></i>Easy to Use</h2>
-	                <hr/>
-	                <div class="row">
-	                    <div class="col-sm-8">
-	                        <p>Syncthing is still in development, although a large number of features have already been implemented:</p>
-	                        <ul>
-	                            <li><strong>Web GUI.</strong> Configure and monitor Syncthing via a responsive and powerful interface accessible via your browser.</li>
-	                            <li><strong>Portable.</strong> Works on Mac OS X, Windows, Linux, FreeBSD and Solaris. Run it on your desktop computers and synchronize them with your
-	                                server for backup.
-	                            </li>
-	                            <li><strong>Simple.</strong> Syncthing doesn't need IP addresses or advanced configuration: it just works, over LAN and over the Internet. Every machine
-	                                is identified by an ID. Just give your ID to you friends, share a folder and watch: UPnP
-	                                will do if you don't want to port forward or you don't know how.
-	                            </li>
-	                            <li><strong>Powerful.</strong> Synchronize as many folders as you need with different people.
-	                        </ul>
-	                    </div>
-	                    <div class="col-sm-4">
-	                        <img src="images/screenshot.jpg" alt="screenshot of syncthing" width="360" class="img-thumbnail">
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-
-	        <hr>
-
-	        <div class="row">
-	            <div class="col-sm-4">
-	                <h3 class="text-center"><i class="extra fa fa-comments"></i><br><a target="_blank" href="http://discourse.syncthing.net/">Discuss</a>
-	                    <br>
-	                    <small>Join the talk on the forums</small>
-	                </h3>
-	            </div>
-	            <div class="col-sm-4">
-	                <h3 class="text-center"><i class="extra fa fa-book"></i><br><a target="_blank" href="https://github.com/syncthing/syncthing/wiki">Docs</a>
-	                    <br>
-	                    <small>For Users and Developers</small>
-	                </h3>
-	            </div>
-	            <div class="col-sm-4">
-	                <h3 class="text-center"><i class="extra fa fa-cogs"></i><br><a target="_blank" href="http://github.com/syncthing/syncthing">Contribute</a>
-	                    <br>
-	                    <small>Clone, Fork, and start tinkering</small>
-	                </h3>
-	            </div>
-	        </div>
-
-	        <hr/>
-	        <div class="row">
-	            <div class="col-sm-8 col-sm-offset-2 text-center">
-	                <div style="font-size:16px;margin:0 auto;width:300px" class="blockchain-btn" data-address="1BmVwkLeEmk5GmBtfYsVz6FWLsXjCYZkdu" data-shared="false">
-	                    <div class="blockchain stage-begin">
-	                        <img alt="donate bitcoins" src="https://blockchain.info/Resources/buttons/donate_64.png"/>
-	                    </div>
-	                    <div class="blockchain stage-loading" style="text-align:center">
-	                        <img alt="loading" src="https://blockchain.info/Resources/loading-large.gif"/>
-	                    </div>
-	                    <div class="blockchain stage-ready">
-	                        <p class="text-center">Please Donate To Bitcoin Address: <b>[[address]]</b></p>
-
-	                        <p class="text-center" class="qr-code"></p>
-	                    </div>
-	                    <div class="blockchain stage-paid">
-	                        Donation of <b>[[value]] BTC</b> Received. Thank You.
-	                    </div>
-	                    <div class="blockchain stage-error">
-	                        <font color="red">[[error]]</font>
-	                    </div>
-	                </div>
-
-	                <p>All donations help fund costs incurred by the development and maintenance of syncthing&mdash;such as domain fees&mdash;but not as salary or compensation for the
-	                    development work.</p>
-	            </div>
-	        </div>
-
-	        <div class="row">
-	            <hr/>
-	            <div class="col-sm-12 text-center">
-	                <iframe src="http://ghbtns.com/github-btn.html?user=syncthing&repo=syncthing&type=watch&count=true&size=large" allowtransparency="true" frameborder="0"
-	                        scrolling="0" width="170" height="30"></iframe>
-	                <iframe src="http://ghbtns.com/github-btn.html?user=syncthing&repo=syncthing&type=fork&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0"
-	                        width="170" height="30"></iframe>
-	            </div>
-	        </div>
-	    </div>
-	</div>
-	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-	<script type="text/javascript" src="https://blockchain.info//Resources/wallet/pay-now-button.js" async></script>
+    <div class="github-fork-ribbon-wrapper right">
+        <div class="github-fork-ribbon">
+            <a target="_blank" href="https://github.com/syncthing/syncthing">Fork me on GitHub</a>
+        </div>
+    </div>
+    <div class="top">
+        <div class="container-fluid container">
+            <div class="jumbotron">
+                <h1>
+                    <img alt="Syncthing" id='syncthing-logo' title="Syncthing" src="images/logo-horizontal.svg" />
+                </h1>
+                <p class="under-logo">Syncthing replaces proprietary sync and cloud services with something open, trustworthy and decentralized. Your data is your data alone and
+                    <em>you</em> deserve to choose where it is stored, if it is shared with some third party and how it's transmitted over the Internet.</p>
+            </div>
+            <small class="attribution">
+                <a href="https://www.flickr.com/photos/iamjanosik/14286545284/">Photo</a> by Steve Janosic /
+                <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY-NC-ND</a>
+            </small>
+        </div>
+    </div>
+    <div id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>
+                        <i class="title fa fa-download"></i>Get Started</h2>
+                    <hr/>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 class="text-center">Windows, Linux, Mac, BSD and Solaris</h3>
+                            <p class="text-center">
+                                <a class="btn btn-primary btn-lg" href="https://github.com/syncthing/syncthing/releases/latest">
+                                    <i class="fa fa-github"></i>&nbsp;Download from GitHub</a>
+                            </p>
+                            <p class="text-center"> Make sure to check out the
+                                <a href="https://github.com/syncthing/syncthing/wiki/Getting-Started">Getting Started Guide</a> if you need help. Releases are signed as described on the
+                                <a href="security.html">security</a> page.</p>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <h3>Third party contributions</h3>
+                            <p>
+                                <a href="https://github.com/syncthing/syncthing-android">Android app</a>
+                            </p>
+                            <p>
+                                <a href="https://play.google.com/store/apps/details?id=com.nutomic.syncthingandroid">
+                                    <img alt="Get it on Google Play" src="https://developer.android.com/images/brand/en_generic_rgb_wo_60.png">
+                                </a>
+                                <a href="https://f-droid.org/repository/browse/?fdid=com.nutomic.syncthingandroid">
+                                    <img alt="Get it on F-Droid" src="https://f-droid.org/wiki/images/0/06/F-Droid-button_get-it-on.png">
+                                </a>
+                            </p>
+                            <p>
+                                <a href="https://github.com/syncthing/syncthing-gtk">Cross platform GUI wrapper</a>,
+                                <a href="https://github.com/syncthing/syncthing-inotify/releases/latest">filesystem watcher</a>, and
+                                <a href="https://github.com/syncthing/syncthing/wiki/Community-Contributions">other</a> community contributions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>
+                        <i class="title fa fa-lock"></i>Secure &amp; Private</h2>
+                    <hr/>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <ul>
+                                <li>
+                                    <strong>Private.</strong> None of your data is ever stored anywhere else than on your computers. There is no central server that might be compromised, legally or illegally.</li>
+                                <li>
+                                    <strong>Encrypted.</strong> All communication is secured using TLS. The encryption used includes perfect forward secrecy to prevent any eavesdropper from ever gaining access to your data.</li>
+                                <li>
+                                    <strong>Authenticated.</strong> Every node is identified by a strong cryptographic certificate. Only nodes you have explicitly allowed can connect to your cluster.</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="images/rsa.jpg" alt="rsa" width="360" class="img-thumbnail">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>
+                        <i class="title fa fa-code-fork"></i>Open Development</h2>
+                    <hr/>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <p></p>
+                            <ul>
+                                <li>
+                                    <strong>Open Discourse.</strong> Development and usage is always open for discussion.
+                                    <br />
+                                    <a target="_blank" href="http://discourse.syncthing.net/">Syncthing Discussion Forum</a>
+                                </li>
+                                <li>
+                                    <strong>Open Source.</strong> All source code is available on GitHub &mdash; what you see is what you get, there is no hidden funny business.
+                                    <br />
+                                    <a target="_blank" href="https://github.com/syncthing/syncthing/tree/master">Syncthing Source Code</a>
+                                </li>
+                                <li>
+                                    <strong>Open Protocol.</strong> The protocol is a documented standard &mdash; no hidden magic.
+                                    <br />
+                                    <a target="_blank" href="https://github.com/syncthing/specs/blob/master/BEPv1.md">Syncthing Protocol Definition</a>
+                                </li>
+                                <li>
+                                    <strong>Open Development.</strong> Any bugs found are immediately visible for anyone to browse &mdash; no hidden flaws.
+                                    <br />
+                                    <a target="_blank" href="https://github.com/syncthing/syncthing/issues?state=open">Syncthing Issue Tracker</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="images/code.jpg" alt="code" width="360" class="img-thumbnail">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>
+                        <i class="title fa fa-users"></i>Easy to Use</h2>
+                    <hr/>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <p>Syncthing is still in development, although a large number of features have already been implemented:</p>
+                            <ul>
+                                <li>
+                                    <strong>Web GUI.</strong> Configure and monitor Syncthing via a responsive and powerful interface accessible via your browser.</li>
+                                <li>
+                                    <strong>Portable.</strong> Works on Mac OS X, Windows, Linux, FreeBSD and Solaris. Run it on your desktop computers and synchronize them with your server for backup.</li>
+                                <li>
+                                    <strong>Simple.</strong> Syncthing doesn't need IP addresses or advanced configuration: it just works, over LAN and over the Internet. Every machine is identified by an ID. Just give your ID to you friends, share a folder and watch: UPnP will do if you don't want to port forward or you don't know how.</li>
+                                <li>
+                                    <strong>Powerful.</strong> Synchronize as many folders as you need with different people.</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="images/screenshot.jpg" alt="screenshot of syncthing" width="360" class="img-thumbnail">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3 class="text-center">
+                        <i class="extra fa fa-comments"></i>
+                        <br />
+                        <a target="_blank" href="http://discourse.syncthing.net/">Discuss</a>
+                        <br />
+                        <small>Join the talk on the forums</small>
+                    </h3>
+                </div>
+                <div class="col-sm-4">
+                    <h3 class="text-center">
+                        <i class="extra fa fa-book"></i>
+                        <br />
+                        <a target="_blank" href="https://github.com/syncthing/syncthing/wiki">Docs</a>
+                        <br />
+                        <small>For Users and Developers</small>
+                    </h3>
+                </div>
+                <div class="col-sm-4">
+                    <h3 class="text-center">
+                        <i class="extra fa fa-cogs"></i>
+                        <br />
+                        <a target="_blank" href="http://github.com/syncthing/syncthing">Contribute</a>
+                        <br />
+                        <small>Clone, Fork, and start tinkering</small>
+                    </h3>
+                </div>
+            </div>
+            <hr/>
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text-center">
+                    <div style="font-size:16px;margin:0 auto;width:300px" class="blockchain-btn" data-address="1BmVwkLeEmk5GmBtfYsVz6FWLsXjCYZkdu" data-shared="false">
+                        <div class="blockchain stage-begin">
+                            <img alt="donate bitcoins" src="https://blockchain.info/Resources/buttons/donate_64.png" />
+                        </div>
+                        <div class="blockchain stage-loading" style="text-align:center">
+                            <img alt="loading" src="https://blockchain.info/Resources/loading-large.gif" />
+                        </div>
+                        <div class="blockchain stage-ready">
+                            <p class="text-center">Please Donate To Bitcoin Address:
+                                <b>[[address]]</b>
+                            </p>
+                            <p class="text-center" class="qr-code"></p>
+                        </div>
+                        <div class="blockchain stage-paid"> Donation of
+                            <b>[[value]] BTC</b> Received. Thank You.</div>
+                        <div class="blockchain stage-error">
+                            <font color="red">[[error]]</font>
+                        </div>
+                    </div>
+                    <p> All donations help fund costs incurred by the development and maintenance of syncthing&mdash;such as domain fees&mdash;but not as salary or compensation for the development work.</p>
+                </div>
+            </div>
+            <div class="row">
+                <hr/>
+                <div class="col-sm-12 text-center">
+                    <iframe src="http://ghbtns.com/github-btn.html?user=syncthing&repo=syncthing&type=watch&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+                    <iframe src="http://ghbtns.com/github-btn.html?user=syncthing&repo=syncthing&type=fork&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://blockchain.info//Resources/wallet/pay-now-button.js" async></script>
 </body>
+
 </html>
