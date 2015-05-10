@@ -116,3 +116,24 @@ Breakpoint: viewport too narrow for two-column, go to one column (as per bootstr
 		margin-top: 20px;
 	}
 }
+
+#dynamic-downloads {
+	display: none;
+}
+
+#download-header {
+	text-align: center;
+}
+
+#download-links {
+	-moz-columns: 2;
+	-webkit-columns: 2;
+	columns: 2;
+	text-align: center;
+}
+
+#download-links ul, #download-links ul li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
