@@ -72,11 +72,17 @@
                     <hr/>
                     <div class="row">
                         <div class="col-md-6">
-                            <h3 class="text-center">Windows, Linux, Mac, BSD and Solaris</h3>
-                            <p class="text-center">
-                                <a class="btn btn-primary btn-lg" href="https://github.com/syncthing/syncthing/releases/latest">
-                                    <i class="fa fa-github"></i>&nbsp;Download from GitHub</a>
-                            </p>
+                            <h3 class="text-center">Syncthing Core (CLI &amp; Web UI)</h3>
+                            <div id="static-download">
+                                <p class="text-center" id="download-button">
+                                    <a class="btn btn-primary btn-lg" href="https://github.com/syncthing/syncthing/releases/latest">
+                                        <i class="fa fa-github"></i>&nbsp;Download from GitHub</a>
+                                </p>
+                            </div>
+                            <div id="dynamic-downloads">
+                                <h4 id="download-header"></h4>
+                                <p id="download-links"></p>
+                            </div>
                             <p class="text-center"> Make sure to check out the
                                 <a href="https://github.com/syncthing/syncthing/wiki/Getting-Started">Getting Started Guide</a> if you need help. Releases are signed as described on the
                                 <a href="security.html">security</a> page.</p>
@@ -251,6 +257,7 @@
         </div>
     </div>
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="js/downloads.js"></script>
     <script type="text/javascript" src="https://blockchain.info/Resources/wallet/pay-now-button.js" async></script>
 </body>
 
