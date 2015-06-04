@@ -192,7 +192,114 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>
+                        <i class="title fa fa-money"></i>Donate</h2>
+                    <hr/>
+
+                    <p>Developing Syncthing costs money. Currently not as compensation for the developers &mdash; that's all volunteer work &mdash; but in domain and hosting fees for the various servers we need to run the operation. Your donations help fund these costs. Donations are accepted securely with <a href="https://stripe.com/">Stripe</a>.</p>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <form action="https://syncthing.net/charge?amount=5" method="POST">
+                      <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                        data-key="pk_live_7SJOzG0qoGnIjMHbEOnnhEce"
+                        data-image="/img/documentation/checkout/marketplace.png"
+                        data-name="Syncthing"
+                        data-description="Donation ($5.00)"
+                        data-currency="usd"
+                        data-amount="500"
+                        data-label="Donate $5"
+                        data-panel-label="Donate"
+                        data-allow-remember-me="false">
+                      </script>
+                    </form>
+                    <p class="text-muted">A nice way to say thank you. :) </p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <form action="https://syncthing.net/charge?amount=10" method="POST">
+                      <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                        data-key="pk_live_7SJOzG0qoGnIjMHbEOnnhEce"
+                        data-image="/img/documentation/checkout/marketplace.png"
+                        data-name="Syncthing"
+                        data-description="Donation ($10.00)"
+                        data-currency="usd"
+                        data-amount="1000"
+                        data-label="Donate $10"
+                        data-panel-label="Donate"
+                        data-allow-remember-me="false">
+                      </script>
+                    </form>
+                    <p class="text-muted">Pays for one month of hosting for a web server or discovery server.</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <form action="https://syncthing.net/charge?amount=20" method="POST">
+                      <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                        data-key="pk_live_7SJOzG0qoGnIjMHbEOnnhEce"
+                        data-image="/img/documentation/checkout/marketplace.png"
+                        data-name="Syncthing"
+                        data-description="Donation ($20.00)"
+                        data-currency="usd"
+                        data-amount="2000"
+                        data-label="Donate $20"
+                        data-panel-label="Donate"
+                        data-allow-remember-me="false">
+                      </script>
+                    </form>
+                    <p class="text-muted">Pays for one month of hosting for the forum.</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <form action="https://syncthing.net/charge?amount=50" method="POST">
+                      <script
+                        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                        data-key="pk_live_7SJOzG0qoGnIjMHbEOnnhEce"
+                        data-image="/img/documentation/checkout/marketplace.png"
+                        data-name="Syncthing"
+                        data-description="Donation ($40.00)"
+                        data-currency="usd"
+                        data-amount="4000"
+                        data-label="Donate $40"
+                        data-panel-label="Donate"
+                        data-allow-remember-me="false">
+                      </script>
+                    </form>
+                    <p class="text-muted">Pays for one month of hosting for a build server.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div style="font-size:16px;margin:0 auto;width:300px" class="blockchain-btn" data-address="1BmVwkLeEmk5GmBtfYsVz6FWLsXjCYZkdu" data-shared="false">
+                        <div class="blockchain stage-begin">
+                            <img alt="donate bitcoins" src="https://blockchain.info/Resources/buttons/donate_64.png" />
+                        </div>
+                        <div class="blockchain stage-loading" style="text-align:center">
+                            <img alt="loading" src="https://blockchain.info/Resources/loading-large.gif" />
+                        </div>
+                        <div class="blockchain stage-ready">
+                            <p class="text-center">Please Donate To Bitcoin Address:
+                                <b>[[address]]</b>
+                            </p>
+                            <p class="text-center" class="qr-code"></p>
+                        </div>
+                        <div class="blockchain stage-paid"> Donation of
+                            <b>[[value]] BTC</b> Received. Thank You.</div>
+                        <div class="blockchain stage-error">
+                            <font color="red">[[error]]</font>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <hr>
+
             <div class="row">
                 <div class="col-sm-4">
                     <h3 class="text-center">
@@ -222,31 +329,7 @@
                     </h3>
                 </div>
             </div>
-            <hr/>
-            <div class="row">
-                <div class="col-sm-8 col-sm-offset-2 text-center">
-                    <div style="font-size:16px;margin:0 auto;width:300px" class="blockchain-btn" data-address="1BmVwkLeEmk5GmBtfYsVz6FWLsXjCYZkdu" data-shared="false">
-                        <div class="blockchain stage-begin">
-                            <img alt="donate bitcoins" src="https://blockchain.info/Resources/buttons/donate_64.png" />
-                        </div>
-                        <div class="blockchain stage-loading" style="text-align:center">
-                            <img alt="loading" src="https://blockchain.info/Resources/loading-large.gif" />
-                        </div>
-                        <div class="blockchain stage-ready">
-                            <p class="text-center">Please Donate To Bitcoin Address:
-                                <b>[[address]]</b>
-                            </p>
-                            <p class="text-center" class="qr-code"></p>
-                        </div>
-                        <div class="blockchain stage-paid"> Donation of
-                            <b>[[value]] BTC</b> Received. Thank You.</div>
-                        <div class="blockchain stage-error">
-                            <font color="red">[[error]]</font>
-                        </div>
-                    </div>
-                    <p> All donations help fund costs incurred by the development and maintenance of syncthing&mdash;such as domain fees&mdash;but not as salary or compensation for the development work.</p>
-                </div>
-            </div>
+
             <div class="row">
                 <hr/>
                 <div class="col-sm-12 text-center">
