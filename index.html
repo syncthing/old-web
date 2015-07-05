@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="syncthingApp">
 <head>
     <title>Syncthing</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -195,85 +195,38 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <h2>
-                        <i class="title fa fa-heart"></i>Donate</h2>
+                    <h2><i class="title fa fa-heart"></i>Donate</h2>
                     <hr/>
 
-                    <p>Developing Syncthing costs money. Currently not as compensation for the developers &mdash; that's all volunteer work &mdash; but in domain and hosting fees for the various servers we need to run the operation. Your donations help fund these costs. Donations are accepted securely with <a href="https://stripe.com/">Stripe</a>.</p>
-
+                    <p>Developing Syncthing costs money. Currently not as compensation for the developers &mdash; that's all volunteer work &mdash; but in domain and hosting fees for the various servers we need to run the operation. Your donations help fund these costs. Donations are accepted securely with <a href="https://stripe.com/">Stripe</a>. We also accept donations in Bitcoins.</p>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-3 text-center">
-                    <form action="https://syncthing.net/charge?amount=5" method="POST">
-                      <script
-                        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                        data-key="pk_live_7SJOzG0qoGnIjMHbEOnnhEce"
-                        data-image="/images/logo-square.png"
-                        data-name="Syncthing"
-                        data-description="Donation ($5.00)"
-                        data-currency="usd"
-                        data-amount="500"
-                        data-label="Donate $5"
-                        data-panel-label="Donate"
-                        data-allow-remember-me="false">
-                      </script>
+            <div class="row" ng-controller="SyncthingCtrl">
+                <div class="col-md-12 text-center">
+                    <form name="donationForm" ng-if="!donation.failed && !donation.succeeded" class="form-inline">
+                      <div class="form-group">
+                        <label class="sr-only" for="amount">Donation Amount</label>
+                        <div class="input-group">
+                          <div class="input-group-addon input-lg">US$</div>
+                          <input type="number" class="form-control text-right input-lg" name="amount" id="amount" placeholder="Amount" ng-model="donation.amount" min="1" max="1000" required>
+                        </div>
+                      </div>
+                      <button ng-disabled="donationForm.amount.$invalid" type="submit" class="btn btn-success btn-lg" ng-click="charge()">Donate</button>
                     </form>
-                    <p class="text-muted">A nice way to say thank you. :) </p>
-                </div>
-                <div class="col-md-3 text-center">
-                    <form action="https://syncthing.net/charge?amount=10" method="POST">
-                      <script
-                        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                        data-key="pk_live_7SJOzG0qoGnIjMHbEOnnhEce"
-                        data-image="/images/logo-square.png"
-                        data-name="Syncthing"
-                        data-description="Donation ($10.00)"
-                        data-currency="usd"
-                        data-amount="1000"
-                        data-label="Donate $10"
-                        data-panel-label="Donate"
-                        data-allow-remember-me="false">
-                      </script>
-                    </form>
-                    <p class="text-muted">Pays for one month of hosting for a web server or discovery server.</p>
-                </div>
-                <div class="col-md-3 text-center">
-                    <form action="https://syncthing.net/charge?amount=20" method="POST">
-                      <script
-                        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                        data-key="pk_live_7SJOzG0qoGnIjMHbEOnnhEce"
-                        data-image="/images/logo-square.png"
-                        data-name="Syncthing"
-                        data-description="Donation ($20.00)"
-                        data-currency="usd"
-                        data-amount="2000"
-                        data-label="Donate $20"
-                        data-panel-label="Donate"
-                        data-allow-remember-me="false">
-                      </script>
-                    </form>
-                    <p class="text-muted">Pays for one month of hosting for the forum.</p>
-                </div>
-                <div class="col-md-3 text-center">
-                    <form action="https://syncthing.net/charge?amount=50" method="POST">
-                      <script
-                        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                        data-key="pk_live_7SJOzG0qoGnIjMHbEOnnhEce"
-                        data-image="/images/logo-square.png"
-                        data-name="Syncthing"
-                        data-description="Donation ($40.00)"
-                        data-currency="usd"
-                        data-amount="4000"
-                        data-label="Donate $40"
-                        data-panel-label="Donate"
-                        data-allow-remember-me="false">
-                      </script>
-                    </form>
-                    <p class="text-muted">Pays for one month of hosting for a build server.</p>
+
+                    <div ng-if="donation.failed" class="alert alert-danger">
+                        <h4>Woops :(</h4>
+                        <p>Something went wrong processing your donation. The error is on our side, not yours. Your card was not charged. Sorry for messing up!</p>
+                    </div>
+
+                    <div ng-if="donation.succeeded" class="alert alert-success">
+                        <h4>Thank you!</h4>
+                        <p>We will survive a little longer thanks to you! :)</p>
+                    </div>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-md-12 text-center">
                     <div style="font-size:16px;margin:0 auto;width:300px" class="blockchain-btn" data-address="1BmVwkLeEmk5GmBtfYsVz6FWLsXjCYZkdu" data-shared="false">
@@ -298,7 +251,7 @@
                 </div>
             </div>
 
-            <hr>
+            <hr/>
 
             <div class="row">
                 <div class="col-sm-4">
@@ -340,8 +293,11 @@
         </div>
     </div>
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="js/downloads.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="https://blockchain.info/Resources/wallet/pay-now-button.js" async></script>
+    <script type="text/javascript" src="https://checkout.stripe.com/checkout.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/downloads.js"></script>
 </body>
 
 </html>
