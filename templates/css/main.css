@@ -181,6 +181,16 @@ nav a:hover {
     padding: 20px 0;
 }
 
+div#mainheader img {
+    max-width: 80%;
+}
+
+#logo, h1.title {
+    display: none;
+}
+
+
+
 /* ===============
     ALL: IE Fixes
    =============== */
@@ -235,7 +245,7 @@ nav a:hover {
    ==================== */
 
     @import url(font/raleway.css);
-    nav, h1, h2, h3, h4, span.highlight {
+    nav, h1, h2, h3, h4, #mainheader {
         font-family: "Raleway";
     }
 
@@ -286,6 +296,51 @@ nav a:hover {
     .main.no-asides article section pre {
         overflow: visible;
     }
+
+
+/* ============
+    WIDE: Header
+   ============ */
+
+img#logo {
+    display: block;
+    margin: 11px;
+    float: left;
+    height:45px;
+    background: white;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+h1.title {
+    display: inline;
+}
+
+header#sky {
+    background-image: url(../img/sky.jpg);
+    background-size: cover;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+div#mainheader {
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 25px;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+div#mainheader img {
+    width: inherit;
+    height: 128px;
+}
+
+div#mainheader p {
+    margin-left: 150px;
+    color: {{$brandColor}};
+    font-size: 150%;
+}
 }
 
 @media only screen and (min-width: 1140px) {
@@ -359,15 +414,6 @@ table.wide {
 tr.total {
     border-top: 1px solid #eee;
     font-style: italic;
-}
-
-.logo {
-    margin: 11px;
-    float: left;
-    height:45px;
-    background: white;
-    padding: 4px;
-    border-radius: 4px;
 }
 
 a.appstore img {
