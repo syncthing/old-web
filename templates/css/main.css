@@ -489,6 +489,20 @@ details summary {
     cursor: pointer;
 }
 
+figure.screenshot {
+    /* the aside uses quite excessive padding on the sides, that we eat into here. */
+    margin: 5px -25px;
+    padding: 0px;
+}
+
+figure.screenshot img {
+    width: 100%;
+}
+
+figure.screenshot figcaption {
+    text-align: center;
+}
+
 /* ==========================================================================
    Print styles
    ========================================================================== */
