@@ -316,28 +316,27 @@ h1.title {
     display: inline;
 }
 
-header#sky {
+div#mainheader {
     background-image: url(../img/sky.jpg);
     background-size: cover;
-    padding: 15px;
+    padding: 25px;
     margin-bottom: 25px;
+}
+
+div#mainheader article {
+    width: 95%;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 25px;
     border-radius: 25px;
 }
 
-div#mainheader {
-    background-color: rgba(255, 255, 255, 0.7);
-    margin: 25px;
-    padding: 25px;
-    border-radius: 15px;
-}
-
-div#mainheader img {
-    width: inherit;
-    height: 128px;
+div#mainheader article img {
+    margin: 25px 50px 0px 25px;
+    width: 384px;
 }
 
 div#mainheader p {
-    margin-left: 150px;
+    margin: 25px 25px 25px 150px;
     color: {{$brandColor}};
     font-size: 150%;
 }
