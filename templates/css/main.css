@@ -440,8 +440,8 @@ input.number {
     padding-left: 10px;
 }
 
-span.highlight {
-    font-weight: bold;
+details summary {
+    cursor: pointer;
 }
 
 /* ==========================================================================
