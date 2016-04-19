@@ -1,0 +1,117 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+{{define "downloads"}}
+{{with .LatestVersion}}
+<details>
+<summary>Downloads</summary>
+<h3>Version {{.FriendlyName}} <small>({{.ReleaseDate}})</small></h3>
+<ul>
+    {{range .SortedAssets}}
+    <li><a href="{{.URL}}">{{.FriendlyName}}</a></li>
+    {{end}}
+</ul>
+{{end}}
+
+{{if .HasOlderVersions}}
+<details>
+    <summary>Older versions</summary>
+    {{range .OlderVersions}}
+    <h4>Version {{.FriendlyName}} <small>({{.ReleaseDate}})</small></h4>
+    <ul>
+        {{range .SortedAssets}}
+        <li><a href="{{.URL}}">{{.FriendlyName}}</a></li>
+        {{end}}
+    </ul>
+    {{end}}
+</details>
+</details>
+{{end}}
+{{end}}
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <div class="header-container">
+        <header class="wrapper clearfix">
+            <h1 class="title">Syncthing</h1>
+            <nav>
+                <ul>
+                    <li><a href="/"><i class="fa fa-home"></i>&nbsp;Home</a></li>
+                    <li class="selected"><a href="downloads.html"><i class="fa fa-download"></i>&nbsp;Downloads</a></li>
+                    <li><a href="donate.html"><i class="fa fa-heart"></i>&nbsp;Donate</a></li>
+                    <li><a href="security.html"><i class="fa fa-lock"></i>&nbsp;Security</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="main-container">
+        <div class="main wrapper clearfix">
+            <article>
+                <section>
+                    <h1>Downloads</h1>
+                </section>
+
+                <section>
+                    <h2>SyncTrayzor</h2>
+                    <p>SyncTrayzor provides a <em>native GUI experience</em> on <em>Windows</em>. SyncTrayzor automatically downloads and uses the latest version of Syncthing Core.
+                    {{template "downloads" .synctrayzor}}
+                </section>
+
+                <section>
+                    <h2>Syncthing-GTK</h2>
+                    <p>
+                        Syncthing-GTK provides a <em>native GUI experience</em> on <em>Linux and Windows</em>. Syncthing-GTK automatically downloads and uses the latest version of Syncthing Core.
+                    For installation instructions for Linux, please visit the <a href="https://github.com/syncthing/synthing-gtk/">project page</a>.
+                    </p>
+                    {{template "downloads" .syncthinggtk}}
+                </section>
+
+                <section>
+                    <h2>Syncthing Core</h2>
+                    <p>Syncthing Core is the low level component implementing the Syncthing protocol. Use this on <em>other platforms</em>, <em>servers</em> or computers where you want a <em>web based user interface</em>.</p>
+                    <p>The packages linked here are executables with automatic upgrade capability. For Debian based Linux systems there is also an <a href="https://apt.syncthing.net/">APT repository</a>.</p>
+                    {{template "downloads" .syncthing}}
+                </section>
+
+                <section>
+                    <h2>Extra Components</h2>
+                    <h3>Discovery Server</h3>
+                    {{template "downloads" .discosrv}}
+                    <h3>Relay Server</h3>
+                    {{template "downloads" .discosrv}}
+                </section>
+            </article>
+
+            <aside>
+                <h3>About Versions and Upgrades</h3>
+                <p>Explain about automatic upgrades and stuff</p>
+            </aside>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js"></script>
+    <script type="text/javascript" src="https://checkout.stripe.com/checkout.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+
+</html>

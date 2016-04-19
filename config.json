@@ -1,0 +1,42 @@
+{
+    "ListenAddr": "127.0.0.1:8891",
+    "RepoCacheTime": 3600000000000,
+    "TemplateCacheTime": 600000000000,
+    "Repos": [
+        {
+            "FriendlyName": "Syncthing",
+            "GithubName": "syncthing/syncthing",
+            "NameExpr": "Syncthing",
+            "ArchExpr": "/syncthing-.*?-(.*?)-/",
+            "OSExpr": "/syncthing-(.*?)-/"
+        },
+        {
+            "FriendlyName": "SyncTrayzor",
+            "GithubName": "canton7/synctrayzor",
+            "NameExpr": "/^([^-]+)-/",
+            "ArchExpr": "/-(x86|x64)\\.(?:zip|exe)/",
+            "OSExpr": "windows"
+        },
+        {
+            "FriendlyName": "Syncthing GTK",
+            "GithubName": "syncthing/syncthing-gtk",
+            "NameExpr": "/((?:full-)?installer)/",
+            "ArchExpr": "386",
+            "OSExpr": "windows"
+        },
+        {
+            "FriendlyName": "Discovery Server",
+            "GithubName": "syncthing/discosrv",
+            "NameExpr": "Discovery Server",
+            "ArchExpr": "/discosrv-.*?-(.*?)\\./",
+            "OSExpr": "/discosrv-(.*?)-/"
+        },
+        {
+            "FriendlyName": "Relay Server",
+            "GithubName": "syncthing/relaysrv",
+            "NameExpr": "Relay Server",
+            "ArchExpr": "/relaysrv-.*?-(.*?)\\./",
+            "OSExpr": "/relaysrv-(.*?)-/"
+        }
+    ]
+}
