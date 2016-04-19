@@ -1,0 +1,3 @@
+[submodule "static/details-shim"]
+	path = static/details-shim
+	url = https://github.com/tyleruebele/details-shim

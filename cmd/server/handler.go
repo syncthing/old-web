@@ -68,7 +68,8 @@ func (h *handler) handle(w http.ResponseWriter, req *http.Request) {
 		switch filepath.Ext(path) {
 		case ".css":
 			w.Header().Set("Content-Type", "text/css")
-
+		case ".html":
+			w.Header().Set("Content-Type", "text/html")
 		default:
 			w.Header().Set("Content-Type", http.DetectContentType(buf.Bytes()))
 		}
