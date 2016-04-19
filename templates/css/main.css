@@ -235,7 +235,7 @@ nav a:hover {
    ==================== */
 
     @import url(font/raleway.css);
-    nav, h1, h2, h3, h4, em {
+    nav, h1, h2, h3, h4, span.highlight {
         font-family: "Raleway";
     }
 
@@ -428,6 +428,20 @@ input.number {
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
+}
+
+.alert-danger {
+    border-left: 5px solid #D91E36;
+    padding-left: 10px;
+}
+
+.alert-success {
+    border-left: 5px solid {{$brandColor}};
+    padding-left: 10px;
+}
+
+span.highlight {
+    font-weight: bold;
 }
 
 /* ==========================================================================

@@ -55,14 +55,14 @@
                         <button ng-disabled="donationForm.amount.$invalid" type="submit" class="button" ng-click="charge()">Donate USD</button>
                     </form>
 
-                    <div ng-if="donation.failed" class="alert alert-danger">
-                        <h4>Woops :(</h4>
+                    <div ng-if="donation.failed" class="alert-danger">
+                        <h3>Woops :(</h3>
                         <p>Something went wrong processing your donation. The error is on our side, not yours. Your card was
                             not charged. Sorry for messing up!</p>
                     </div>
 
-                    <div ng-if="donation.succeeded" class="alert alert-success">
-                        <h4>Thank you!</h4>
+                    <div ng-if="donation.succeeded" class="alert-success">
+                        <h3>Thank you!</h3>
                         <p>We will survive a little longer thanks to you! :)</p>
                     </div>
                 </section>
