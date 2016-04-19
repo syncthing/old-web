@@ -50,10 +50,9 @@
                     <p>Donate securely using any major credit or debit card, processed by <a href="https://stripe.com/" target="_new">Stripe</a>.</p>
 
                     <form name="donationForm" ng-if="!donation.failed && !donation.succeeded">
-                        <label class="sr-only" for="amount">Donation Amount</label>
-                        <input type="number" class="form-control text-right input-lg" name="amount" id="amount" placeholder="Amount" ng-model="donation.amount"
+                        <input type="number" class="number" name="amount" id="amount" placeholder="Amount" ng-model="donation.amount"
                             min="1" max="1000" required>
-                        <button ng-disabled="donationForm.amount.$invalid" type="submit" class="btn btn-success btn-lg" ng-click="charge()">Donate</button>
+                        <button ng-disabled="donationForm.amount.$invalid" type="submit" class="button" ng-click="charge()">Donate USD</button>
                     </form>
 
                     <div ng-if="donation.failed" class="alert alert-danger">
@@ -70,9 +69,8 @@
 
                 <section>
                     <h2>With Bitcoins</h2>
-                    <p>We also accept bitcoins, with orders being processed by Coinbase.</p>
-                    <a class="coinbase-button" data-code="fca2a8f96548f6b37b8ad4531e249694" data-button-style="donation_large" href="//www.coinbase.com/checkouts/fca2a8f96548f6b37b8ad4531e249694">Donate Bitcoins</a>
-                    <script src="//www.coinbase.com/assets/button.js" type="text/javascript"></script>
+                    <p>We also accept bitcoins, with orders processed by <a href="https://coinbase.com/">Coinbase</a>.</p>
+                    <button id="donbtc" class="coinbase-button button" data-code="fca2a8f96548f6b37b8ad4531e249694" data-button-style="none" href="//www.coinbase.com/checkouts/fca2a8f96548f6b37b8ad4531e249694">Donate Bitcoins</button>
                 </section>
             </article>
 
@@ -99,6 +97,15 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js"></script>
     <script type="text/javascript" src="https://checkout.stripe.com/checkout.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
+    <script src="//www.coinbase.com/assets/button.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function() {
+            $('#donbtc').click(function(){
+                $(document).trigger('coinbase_show_modal', 'fca2a8f96548f6b37b8ad4531e249694');
+                return false;
+            });
+        });
+    </script>
 </body>
 
 </html>

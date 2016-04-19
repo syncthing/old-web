@@ -21,7 +21,7 @@ syncthingApp.controller('SyncthingCtrl', function ($scope) {
 
   $scope.handler = StripeCheckout.configure({
     key: 'pk_live_7SJOzG0qoGnIjMHbEOnnhEce',
-    image: '/images/logo-square.png',
+    image: '/img/logo-square.png',
     token: function (token) {
       $.post("https://syncthing.net/charge", "amount=" + $scope.dollars() + "&stripeToken=" + token.id + "&stripeEmail=" + token.email)
         .done(function () {
