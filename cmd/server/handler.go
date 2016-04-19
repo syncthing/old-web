@@ -27,7 +27,6 @@ func (h *handler) Serve() {
 		h.reposMut.Lock()
 		for _, repo := range getAllRepositories(h.cfg) {
 			key := strings.ToLower(strings.Replace(path.Base(repo.GithubName), "-", "", -1))
-			fmt.Println(key)
 			h.repos[key] = repo
 		}
 		h.reposMut.Unlock()
@@ -46,10 +45,9 @@ func (h *handler) handle(w http.ResponseWriter, req *http.Request) {
 		return
 	}
 
+	// Process it as a template instead
 	tpl := filepath.Join("templates", path)
-	log.Println(tpl)
 	if _, err := os.Stat(tpl); err == nil {
-		log.Println("template", path)
 		t, err := template.New(filepath.Base(tpl)).ParseFiles(tpl)
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)

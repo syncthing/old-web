@@ -51,7 +51,7 @@
 <body>
     <div class="header-container">
         <header class="wrapper clearfix">
-            <h1 class="title">Syncthing</h1>
+            <img src="img/logo-square.png" class="logo"><h1 class="title">Syncthing</h1>
             <nav>
                 <ul>
                     <li><a href="/"><i class="fa fa-home"></i>&nbsp;Home</a></li>
@@ -87,7 +87,7 @@
 
                 <section>
                     <h2>Syncthing Core</h2>
-                    <p>Syncthing Core is the low level component implementing the Syncthing protocol. Use this on <em>other platforms</em>, <em>servers</em> or computers where you want a <em>web based user interface</em>.</p>
+                    <p>Syncthing Core is the component that implements the sync and discovery mechanisms. Use this on by itself on <em>other platforms</em>, <em>servers</em> or computers where you want a <em>web based user interface</em>.</p>
                     <p>The packages linked here are executables with automatic upgrade capability. For Debian based Linux systems there is also an <a href="https://apt.syncthing.net/">APT repository</a>.</p>
                     {{template "downloads" .syncthing}}
                 </section>
@@ -95,15 +95,31 @@
                 <section>
                     <h2>Extra Components</h2>
                     <h3>Discovery Server</h3>
+                    <p>To run your own discovery server. See <a href="https://docs.syncthing.net/users/discosrv.html">the documenation</a>.</p>
                     {{template "downloads" .discosrv}}
                     <h3>Relay Server</h3>
+                    <p>To run your own relay server, or add one to the public pool. See <a href="https://docs.syncthing.net/users/relaying.html">the documentation</a>.</p>
                     {{template "downloads" .discosrv}}
                 </section>
             </article>
 
             <aside>
-                <h3>About Versions and Upgrades</h3>
-                <p>Explain about automatic upgrades and stuff</p>
+                <h2>Android</h2>
+                <p>There is a packaging of <a href="https://github.com/syncthing/syncthing-android" target="_blank">Syncthing for Android devices</a>. It wraps a specially compiled Syncthing Core with a native GUI.</p>
+                <a class="appstore" href="https://play.google.com/store/apps/details?id=com.nutomic.syncthingandroid"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge.png"></a>
+                <a class="appstore" href="https://f-droid.org/repository/browse/?fdid=com.nutomic.syncthingandroid"><img alt="Get it on F-Droid" src="https://f-droid.org/wiki/images/0/06/F-Droid-button_get-it-on.png"></a>
+            </aside>
+
+            <aside>
+                <h2>Contributions</h2>
+                <p>There is a list of further <a href="https://docs.syncthing.net/users/contrib.html">community contributions</a> on the documentation site. These are add-ons, frontends, packagings and so on created by the wider community and provided in the hope that they may be useful.</p>
+                <p>These are not necessarily tested, vetted or endorsed by the Syncthing team themselves.</p>
+            </aside>
+
+            <aside>
+                <h2>Upgrading</h2>
+                <p>Syncthing Core will attempt to keep itself updated with the latest bug fixes automatically. It will only upgrade to versions that are known to be compatible. This is recommended for all users.</p>
+                <p>If you are using the APT repository or another package manager, please use the package manager to keep up to date. Automatic upgrades are not managed by Syncthing in this case.</p>
             </aside>
         </div>
     </div>

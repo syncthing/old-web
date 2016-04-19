@@ -1,0 +1,211 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <div class="header-container">
+        <header class="wrapper clearfix">
+            <img src="img/logo-square.png" class="logo">
+            <h1 class="title">Syncthing</h1>
+            <nav>
+                <ul>
+                    <li><a href="/"><i class="fa fa-home"></i>&nbsp;Home</a></li>
+                    <li><a href="downloads.html"><i class="fa fa-download"></i>&nbsp;Downloads</a></li>
+                    <li><a href="donate.html"><i class="fa fa-heart"></i>&nbsp;Donate</a></li>
+                    <li class="selected"><a href="security.html"><i class="fa fa-lock"></i>&nbsp;Security</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="main-container">
+        <div class="main no-asides wrapper clearfix">
+            <article>
+                <h1>Security</h1>
+
+                <h2>Release Signatures</h2>
+
+                <p> The PGP key for release@syncthing.net (<code>D26E6ED000654A3E</code>) can be used to verify the signatures
+                    of official binary releases. The key is used for releases newer than v0.10.14. For version v0.10.14 and
+                    earlier the key for jakob@nym.se (<a href="https://nym.se/gpg.txt">https://nym.se/gpg.txt</a>,
+                    <code>49F5AEC0BCE524C7</code>) was used. The new release key (release@syncthing.net) is signed by the
+                    old key (jakob@nym.se). </p>
+
+                <p>When performing automatic upgrades, Syncthing verifies the download using a compiled in elliptic curve signature.</p>
+
+                <details>
+                    <summary>Release Team PGP Key</summary>
+                    <pre>
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v1
+
+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
+LlHRAP8U8Ozk3ll45SR12Zf2
+=rVev
+-----END PGP PUBLIC KEY BLOCK-----
+</pre>
+                </details>
+
+                <h2>Verifying a Release Signature</h2>
+
+                <pre>
+<i>Download the release file you need, and the sha1sum.txt.asc file</i>
+
+$ <b>curl -sLO https://github.com/syncthing/syncthing/releases/download/v0.10.14/syncthing-linux-amd64-v0.10.14.tar.gz</b>
+$ <b>curl -sLO https://github.com/syncthing/syncthing/releases/download/v0.10.14/sha1sum.txt.asc</b>
+
+<i>Verify that the SHA1 checksum is correct for the release. Errors will be
+printed for the release files you did not download - these can be ignored. The
+important line is the bolded one, that indicates the checksum is correct for
+the downloaded release file.</i>
+
+$ <b>sha1sum -c sha1sum.txt.asc</b>
+...
+sha1sum: syncthing-linux-386-v0.10.14.tar.gz: No such file or directory
+syncthing-linux-386-v0.10.14.tar.gz: FAILED open or read
+<b>syncthing-linux-amd64-v0.10.14.tar.gz: OK</b>
+sha1sum: syncthing-linux-armv5-v0.10.14.tar.gz: No such file or directory
+syncthing-linux-armv5-v0.10.14.tar.gz: FAILED open or read
+...
+sha1sum: WARNING: 20 lines are improperly formatted
+sha1sum: WARNING: 12 listed files could not be read
+
+<i>Import the release keys (only necessary if you haven't done this previously).</i>
+
+$ <b>gpg --keyserver pool.sks-keyservers.net --recv-key 49F5AEC0BCE524C7 D26E6ED000654A3E</b>
+gpg: requesting key BCE524C7 from hkp server pool.sks-keyservers.net
+gpg: requesting key 00654A3E from hkp server pool.sks-keyservers.net
+gpg: key BCE524C7: public key "Jakob Borg (calmh) &lt;jakob@nym.se&gt;" imported
+gpg: key 00654A3E: public key "Syncthing Release Management &lt;release@syncthing.net&gt;" imported
+gpg: no ultimately trusted keys found
+gpg: Total number processed: 2
+gpg:               imported: 2  (RSA: 2)
+
+<i>Verify the signature on the checksum file. Again, the bolded line is the important one.</i>
+
+$ <b>gpg --verify sha1sum.txt.asc</b>
+gpg: Signature made Mon 29 Dec 2014 09:51:39 AM CET using RSA key ID BCE524C7
+<b>gpg: Good signature from "Syncthing Release Management &lt;release@syncthing.net&gt;"</b>
+gpg: WARNING: This key is not certified with a trusted signature!
+gpg:          There is no indication that the signature belongs to the owner.
+Primary key fingerprint: 37C8 4554 E7E0 A261 E4F7  6E1E D26E 6ED0 0065 4A3E
+</pre>
+
+                <h2>Contacting the Syncthing Team Securely</h2>
+
+                <p> If you believe that you've found a Syncthing-related security vulnerability, please report it by sending
+                    email to the address security@syncthing.net. The PGP key for security@syncthing.net (
+                    <code>B683AD7B76CAB013</code>) below can be used to send encrypted mail or to verify responses received
+                    from that address. </p>
+
+                <details>
+                    <summary>Security Team PGP Key</summary>
+                    <pre>
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: GnuPG v1
+
+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
+M7Q8GZuww1rk
+=No/v
+-----END PGP PUBLIC KEY BLOCK-----
+</pre>
+                </details>
+            </article>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js"></script>
+    <script type="text/javascript" src="https://checkout.stripe.com/checkout.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+
+</html>

@@ -98,6 +98,29 @@ em {
     padding: 2px;
 }
 
+/* Links in normal text are blue with blue underline on hover */
+a, a:visited {
+    color:  {{$brandColor}};
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Links in an aside are just bolded, as they are probably navigation links */
+aside a, aside a:hover, aside a:visited {
+    color: white;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+}
+/* ... except if they are inside a <p> (running text), when we instead add a
+yellow underline to highlight them. */
+aside p>a, aside p>a:hover, aside p>a:visited {
+    font-weight: normal;
+    border-bottom: 2px solid {{$magicMarker}};
+}
+
 /* ==============
     MOBILE: Menu
    ============== */
@@ -252,6 +275,11 @@ nav a:hover {
         float: right;
         width: 28%;
     }
+
+    .main.no-asides article {
+        float: none;
+        width: 100%;
+    }
 }
 
 @media only screen and (min-width: 1140px) {
@@ -324,7 +352,37 @@ table.wide {
 
 tr.total {
     border-top: 1px solid #eee;
+    font-style: italic;
+}
+
+.logo {
+    margin: 11px;
+    float: left;
+    height:45px;
+    background: white;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+a.appstore img {
+    padding: 5px;
+    height: 40px;
+}
+
+aside ul {
+    padding-left: 0;
+}
+
+aside+aside {
+    margin-top: 25px;
+}
+
+dt {
     font-weight: bold;
+}
+dd {
+    margin-left: 1.25em;
+    margin-bottom: 0.5em;
 }
 
 /* ==========================================================================
