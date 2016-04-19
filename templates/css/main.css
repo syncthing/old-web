@@ -190,7 +190,6 @@ div#mainheader img {
 }
 
 
-
 /* ===============
     ALL: IE Fixes
    =============== */
@@ -320,8 +319,8 @@ header#sky {
     background-image: url(../img/sky.jpg);
     background-size: cover;
     padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 15px;
+    margin-bottom: 25px;
+    border-radius: 25px;
 }
 
 div#mainheader {
