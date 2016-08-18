@@ -64,8 +64,12 @@ li {
 	font-weight: bold;
 }
 
-.security-logo{
+.security-logo {
   max-width: 100%;
+}
+
+.sponsor-logo {
+	width: 75%;
 }
 
 /* github ribbon */
