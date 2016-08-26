@@ -1,32 +1,25 @@
 ==================================================================
-https://keybase.io/calmh
+https://keybase.io/syncthing
 --------------------------------------------------------------------
 
 I hereby claim:
 
   * I am an admin of https://syncthing.net
-  * I am calmh (https://keybase.io/calmh) on keybase.
-  * I have a public key with fingerprint 3A16 17A5 7BAC 0594 102C  D6C4 22F3 37D1 8108 0D26
+  * I am syncthing (https://keybase.io/syncthing) on keybase.
+  * I have a public key with fingerprint ABF7 C6E7 A821 A483 F30E  44F3 B683 AD7B 76CA B013
 
 To do so, I am signing this object:
 
 {
     "body": {
-        "client": {
-            "name": "keybase.io node.js client",
-            "version": "0.7.7"
-        },
         "key": {
-            "fingerprint": "3a1617a57bac0594102cd6c422f337d181080d26",
+            "eldest_kid": "010176c7ab323eb1035b65cbc267a4d6e19b45c465111b578709e0ff03df5153bdcb0a",
+            "fingerprint": "abf7c6e7a821a483f30e44f3b683ad7b76cab013",
             "host": "keybase.io",
-            "key_id": "22F337D181080D26",
-            "uid": "7718f9b981c410e61eec6de63d49b119",
-            "username": "calmh"
-        },
-        "merkle_root": {
-            "ctime": 1431197463,
-            "hash": "461672a6c4cba96894bf4e09ec9b5fda5b8e9daefe46453d4e1cdfc1fa469146c32cc52a4589108d499aa2ca70180e58f8d7d7c038959a6ff33caa028868c057",
-            "seqno": 218502
+            "key_id": "b683ad7b76cab013",
+            "kid": "010176c7ab323eb1035b65cbc267a4d6e19b45c465111b578709e0ff03df5153bdcb0a",
+            "uid": "dfcac9a8586bd9d4dbd28fa1e6a4f119",
+            "username": "syncthing"
         },
         "service": {
             "hostname": "syncthing.net",
@@ -35,10 +28,10 @@ To do so, I am signing this object:
         "type": "web_service_binding",
         "version": 1
     },
-    "ctime": 1431197625,
+    "ctime": 1472208368,
     "expire_in": 157680000,
-    "prev": "1233f198c7c4cf36e3fe29086d77399aa7cbdcfcb3b506c9c9d47c806b7465e5",
-    "seqno": 6,
+    "prev": "82cf871befae1bb056119a701e1c69674554d5e3a74360f15bbc3e6308db751d",
+    "seqno": 5,
     "tag": "signature"
 }
 
@@ -47,36 +40,28 @@ which yields the signature:
 -----BEGIN PGP MESSAGE-----
 Version: GnuPG v1
 
-owFVUntQVFUcXgh1USSR0VGigS6VgLje94PRGo2wSLYnglLs3HvuubtX2HvXuyvG
-c2SGxlZFEDUcl4Aek0EMUZaKwxAlmTO8K6cYk4l0m8h4KEJiBt2LNOX565zz+37f
-7/u+cyqWPmAKDEAmmP4S89LHAzqHBVOaNb2lABFUMQ9JLEBAjgwVj7FTeCdEEpFs
-mCfwbmiR1WhFFaFlpzt6HpOA5ELNLauKjkItjIVBihIMuNEsyYodai5NNrgQgsdo
-jOEpRuABSnEkhuJApAGJ4xJBMCLGYiiLijitUzpUt+e+qcgcp00W9VscT9bxSffw
-SXP43XMFhsFYiRM4FgM6OaQxCAEtQpoQSU7AMM4AuqE2bwnwOU6HIdYJtewcaNNU
-dc4x8MhGHSMJvYUhaUKXw7sdegdJYzSD87pkIPAczXKkIJEQ5SDgBEoSeUpgISfy
-UIIkTVL6VIgBUQKYxJM0h5E0IHAAKJwnKZbTteuqOJ7HAc+gGItCipVYkREZgBIs
-R3E8LemxAJ5HcZalWT0xRtfvhrsUFUnEMZZC8SLjrOXKABq6jczmrbnzFOBx6OFb
-FGi8kEtTPSpQc/SSw+NxuRMN2548l4HdAwWbu/EejU2QFVFv+/+jYjr0/khonEpA
-4OsuWYM22UBQDM2i+jIGwVydE8MJQsI4FjB6VBJBQ0KCOIeytMgwhGGaAYIIJCAQ
-AoXSgAOcSDKARWlBz5uC1H9GaV0nbzcsyXaF9+zWIFLkDYwMMgUEmhYuCDR+rWlx
-8LJ/v/Ig++CsWDn04vjXZwJSnaOJm1EswwadII3pOjmE1oWXjbdsl3F0+eTEq97S
-CxlJF6/+duzW0ZWTb/g8LrNmju/NLO9eueHtR+mp6W2jP4a8p2QGXeBqvc9WnWp4
-p2nL6r6IwvNXfomZqIvLCH3K7v02hXnyu9n0bRWavTU+pLoxbuTqKX8JsXo7gj6W
-fsd1+MTG1OLuS/mx4nB0llKYEHPk+yU3e0bK3/zB1BJXRWXvKxsMTg+PL12UZQ1p
-TPMfilrBvbBm74GwOPPGh1vTOmzScUJ2tBT52s92HCxOb7ea93/yzJ2CvQ/dKLRd
-91kp4viRhuas6sVVy5NvWbTYz4+Or6qbdN5Vqkd3lvmxnpTc9Y+sG+sJ7Fi7ZOzG
-tY8OXQteODNV/PLm8/DuV3X9671/Xlo77vN29R0sGUx6Yp85f8yWOyzenPa37ZG1
-D/rWrENMracDuJ93laY2v/8l+sUrzVH9bQPmsAWKzyWseq3kxFtxf9efDc/p2oTM
-HLu96eI5a2bq08EDf/QXnqkfRwdCwu0Vy2rlzvzoKCwUqaFr8gZmPk4pn9p6eaTv
-pSv+DTs+G5o1secig5jL6IHaqOtkZPK7vLSjPvqn9uciFm1sno2VG2Ke/10Lr1rx
-TTN1uqm3qaayLeKvnOnKlC1h0slPrVsHO/nCD80qV/1r55jTH+orLr19uKC/t7vz
-Hw==
-=aM6w
+owGtUltIFFEY3jUzM6SiFImCmHoI2pY5c+acM7sJvpjlSxhESgbTOTNn3Gl1Zi/j
+qm1Skj0YFVFRUVEQdCET1qzMMOglorKtiHpY7EJ4S6Ik6iGhy4zUS/TYeTmc//++
+7/++w3+4eJYvz39zb0869TCzyP/oPfPV3l32NS0wW28Twmkhymcu3qjzpKNGTV0I
+CyIQAcEaoQxKkDMgQsQw0pgmYUJlHXMQYjLSZIwAAAwRhYghLhqGCHUDAQSZrjGR
+CgHBMK0GnoglTMtxZSkziIY5oYoEqKxAA4pclg3IsAKpTpg7kjIRQJcYsZMewzXH
+aJIHTdutuQ91xt4/8P/Zd/OMnG5oVAtRBSmY6SFd1pkuKQYFHFPZACDkAZM8YdEm
+7qKTbZbmRNzAQntAcMspU+Pez3pR/oYELe647FjCdmzNbnRbEceJJcMe1WmLedgW
+ztTfKiozLd0TDggpnkiatiWEgYvUHNOTBTKRJFGBWAkIvDVmJrhqeghEsCK6x5vD
+U66kImmGspUAxg3KAWMiwm4KSkTAgYZDmMgIyTrikBIZYtEAiDENcgxFRWcEAV3w
+gsUtWwgj1ydt8CKZDRZ1mhNcaC/q8i/N9/nzfAWz87wd8xXNXfBn8YLjc37WFr5g
+X47k06FDfRXZjalIeVXdxSz5NrX62Lnnd9bUZfbXB4crx6unj58WuTOx4erZ8cZZ
+F6ORT/1033ZzvLR+8HbFyLv4wJbmyYlb81R0pc5a8nJ/Q/xSYXr43ou171pzy6lw
+cvGT6WRHd98BHM1lV2we7c+lB4prB0erwkMH/WsW7rjfFH56ombnustHW7LNt05E
+X8+/nOkdXlWZy48W9JdFLb+dOz91ROo5MzY5ONY5dk0qL+v8duoSXf+G/ohvmtr9
+tqa7ZATtUW8ch/Htud4Hga0FddU3V3783J3tiJduKy7JfFc/vJp+fGGgr+v60etV
+I+r9XYujwf5n1XbmFw==
+=I8ei
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
 
-View my publicly-auditable identity here: https://keybase.io/calmh
+View my publicly-auditable identity here: https://keybase.io/syncthing
 
 ==================================================================
