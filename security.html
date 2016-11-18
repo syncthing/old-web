@@ -45,12 +45,8 @@
 
 <h2>Release Signatures</h2>
 
-<p> The PGP key for release@syncthing.net (<code>D26E6ED000654A3E</code>) can be used
-to verify the signatures of official binary releases. The key is used for
-releases newer than v0.10.14. For version v0.10.14 and earlier the key for
-jakob@nym.se (<a href="https://nym.se/gpg.txt">https://nym.se/gpg.txt</a>,
-<code>49F5AEC0BCE524C7</code>) was used. The new release key (release@syncthing.net)
-is signed by the old key (jakob@nym.se). </p>
+<p>The PGP key for release@syncthing.net (<code>D26E6ED000654A3E</code>) can be used
+to verify the signatures of official binary releases newer than v0.10.14.  See <a href="#verify-older-release">note below</a> for older releases.</p>
 
 <pre>
 -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -99,30 +95,36 @@ LlHRAP8U8Ozk3ll45SR12Zf2
 
 <h2>Verifying a Release Signature</h2>
 
+<p>You can browse <a href="https://github.com/syncthing/syncthing/releases/">all releases on GitHub</a>.
+
+<p>Download the release (<i>tar.gz</i> file) and the checksum <i>sha1sum.txt.asc</i> file.<br>
+Example verifying release <i>v0.14.11</i>:
+
 <pre>
-<i>Download the release file you need, and the sha1sum.txt.asc file</i>
+$ <b>curl -sLO https://github.com/syncthing/syncthing/releases/download/v0.14.11/syncthing-linux-amd64-v0.14.11.tar.gz</b>
+$ <b>curl -sLO https://github.com/syncthing/syncthing/releases/download/v0.14.11/sha1sum.txt.asc</b>
+</pre>
 
-$ <b>curl -sLO https://github.com/syncthing/syncthing/releases/download/v0.10.14/syncthing-linux-amd64-v0.10.14.tar.gz</b>
-$ <b>curl -sLO https://github.com/syncthing/syncthing/releases/download/v0.10.14/sha1sum.txt.asc</b>
+<h4>Verify that the SHA1 checksum is correct for the release.</h4>
+Errors will be printed for the release files you did not download - these can be ignored. The
+important line is shown below in bold indicating the checksum is "OK" for the downloaded release file.
 
-<i>Verify that the SHA1 checksum is correct for the release. Errors will be
-printed for the release files you did not download - these can be ignored. The
-important line is the bolded one, that indicates the checksum is correct for
-the downloaded release file.</i>
-
+<pre>
 $ <b>sha1sum -c sha1sum.txt.asc</b>
 ...
-sha1sum: syncthing-linux-386-v0.10.14.tar.gz: No such file or directory
-syncthing-linux-386-v0.10.14.tar.gz: FAILED open or read
-<b>syncthing-linux-amd64-v0.10.14.tar.gz: OK</b>
-sha1sum: syncthing-linux-armv5-v0.10.14.tar.gz: No such file or directory
-syncthing-linux-armv5-v0.10.14.tar.gz: FAILED open or read
+sha1sum: syncthing-linux-386-v0.14.11.tar.gz: No such file or directory
+syncthing-linux-386-v0.14.11.tar.gz: FAILED open or read
+<b>syncthing-linux-amd64-v0.14.11.tar.gz: OK</b>
+sha1sum: syncthing-linux-armv5-v0.14.11.tar.gz: No such file or directory
+syncthing-linux-armv5-v0.14.11.tar.gz: FAILED open or read
 ...
 sha1sum: WARNING: 20 lines are improperly formatted
 sha1sum: WARNING: 12 listed files could not be read
+</pre>
 
-<i>Import the release keys (only necessary if you haven't done this previously).</i>
+<p>Import the old and new release keys (only necessary if you haven't done this previously).
 
+<pre>
 $ <b>gpg --keyserver pool.sks-keyservers.net --recv-key 49F5AEC0BCE524C7 D26E6ED000654A3E</b>
 gpg: requesting key BCE524C7 from hkp server pool.sks-keyservers.net
 gpg: requesting key 00654A3E from hkp server pool.sks-keyservers.net
@@ -131,24 +133,32 @@ gpg: key 00654A3E: public key "Syncthing Release Management &lt;release@syncthin
 gpg: no ultimately trusted keys found
 gpg: Total number processed: 2
 gpg:               imported: 2  (RSA: 2)
+</pre>
 
-<i>Verify the signature on the checksum file. Again, the bolded line is the important one.</i>
+<p>Verify the signature on the checksum file. Again, the bolded line is the important one.
 
+<pre>
 $ <b>gpg --verify sha1sum.txt.asc</b>
-gpg: Signature made Mon 29 Dec 2014 09:51:39 AM CET using RSA key ID BCE524C7
-<b>gpg: Good signature from "Syncthing Release Management &lt;release@syncthing.net&gt;"</b>
+gpg: Signature made Tue Nov 15 07:44:49 2016 CET
+gpg:                using RSA key D26E6ED000654A3E
+gpg: <b>Good signature from "Syncthing Release Management &lt;release@syncthing.net&gt;"</b>
 gpg: WARNING: This key is not certified with a trusted signature!
 gpg:          There is no indication that the signature belongs to the owner.
-Primary key fingerprint: 37C8 4554 E7E0 A261 E4F7  6E1E D26E 6ED0 0065 4A3E
 </pre>
+
+<h2 id="verify-older-release">Verifying an older release</h2>
+
+<p>For versions v0.10.14 and earlier, the key for jakob@nym.se (<a href="https://nym.se/gpg.txt">https://nym.se/gpg.txt</a>,
+<code>49F5AEC0BCE524C7</code>) was used. The new release key (<code>D26E6ED000654A3E</code> release@syncthing.net)
+is signed by the old key (jakob@nym.se) for continuity.
 
 <h2>Contacting the Syncthing Team Securely</h2>
 
-<p> If you believe that you've found a Syncthing-related security
+<p>If you believe that you've found a Syncthing-related security
 vulnerability, please report it by sending email to the address
 security@syncthing.net. The PGP key for security@syncthing.net
 (<code>B683AD7B76CAB013</code>) below can be used to send encrypted mail or to
-verify responses received from that address. </p>
+verify responses received from that address.
 
 <pre>
 -----BEGIN PGP PUBLIC KEY BLOCK-----
