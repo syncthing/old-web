@@ -44,6 +44,7 @@ syncthingApp.controller('SyncthingCtrl', function ($scope) {
       name: 'Syncthing',
       description: 'Donation ($' + $scope.formatted() + ')',
       currency: "usd",
+      zipCode: true,
       amount: $scope.cents(),
       allowRememberMe: false,
       panelLabel: "Donate",
