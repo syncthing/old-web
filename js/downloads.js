@@ -2,9 +2,13 @@
 function appendDownloadLinks(data, tag) {
     var links = {};
     $.each(data.assets, function(i, asset) {
+        if (asset.name.match(/\.asc$/)) {
+            return;
+        }
+
         var m = asset.name.match(/syncthing-(\w+)-(\w+)/);
         if (!m) {
-            return
+            return;
         }
 
         var os = m[1];
@@ -47,6 +51,16 @@ function appendDownloadLinks(data, tag) {
             arch = '32 bit';
         } else if (arch === 'arm') {
             arch = 'ARM';
+        } else if (arch === 'arm64') {
+            arch = 'AArch64';
+        } else if (arch === 'ppc64') {
+            arch = 'PPC64';
+        } else if (arch === 'ppc64le') {
+            arch = 'PPC64-LE';
+        } else if (arch === 'mips') {
+            arch = 'MIPS';
+        } else if (arch === 'mipsle') {
+            arch = 'MIPS-LE';
         }
 
         var l = links[order + os];
