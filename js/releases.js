@@ -65,11 +65,13 @@ function setTags(res) {
 }
 
 function tuesday(d) {
+    d = new Date(d.getTime());
     d.setDate(d.getDate() + 2 - d.getDay());
     return d
 }
 
 function addDays(d, days) {
+    d = new Date(d.getTime());
     d.setDate(d.getDate() + days);
     return d
 }
