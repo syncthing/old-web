@@ -310,7 +310,18 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js"></script>
     <script type="text/javascript" src="https://checkout.stripe.com/checkout.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/releases.js"></script>
     <script type="text/javascript" src="js/downloads.js"></script>
+    <script type="text/javascript">
+    $.getJSON('https://upgrades.syncthing.net/meta.json',function (data) {
+        var res = parseReleases(data);
+        appendDownloadLinks(res.latestRelease, '#download-links')
+        setTags(res);
+        $('#dynamic-downloads').css('display', 'block');
+        $('#static-download').hide();
+    })
+    </script>
+
 </body>
 
 </html>
