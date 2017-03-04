@@ -17,17 +17,27 @@ function parseReleases(data) {
         }
     }
 
-    if (!latestPre || !latestRelease) {
+    if (!latestRelease) {
         return
     }
 
-    if (/-rc.1$/.exec(latestPre.tag_name)) {
-        nextReleaseAt = tuesday(addDays(latestPre.created_at, 14));
+    var nextReleaseAt, nextReleaseVer;
+    if (latestPre.created_at > latestRelease.created_at) {
+        // We have a pre-release out for the next version.
+        nextReleaseVer = latestPre.tag_name.replace(/-rc.+/, '');
+        if (/-rc.1$/.exec(latestPre.tag_name)) {
+            nextReleaseAt = tuesday(addDays(latestPre.created_at, 12));
+        } else {
+            nextReleaseAt = tuesday(addDays(latestPre.created_at, 7));
+        }
     } else {
-        nextReleaseAt = tuesday(addDays(latestPre.created_at, 7));
+        // The latest release is a normal full release.
+        latestPre = undefined; // it's an old pre-release
+        var parts = latestRelease.tag_name.split(".");
+        parts[2] = +parts[2] + 1;
+        nextReleaseVer = parts.join(".");
+        nextReleaseAt = tuesday(addDays(latestRelease.created_at, 14));
     }
-
-    var nextReleaseVer = latestPre.tag_name.replace(/-rc.+/, '');
 
     return {
         latestRelease: latestRelease,
@@ -38,9 +48,14 @@ function parseReleases(data) {
 }
 
 function setTags(res) {
-    $("#latest-pre-tag").html(res.latestPre.tag_name);
-    $("#latest-pre-date").html(datefmt(res.latestPre.created_at));
-    $("#latest-pre-link").attr("href", res.latestPre.html_url);
+    if (res.latestPre) {
+        $("#latest-pre-tag").html(res.latestPre.tag_name);
+        $("#latest-pre-date").html(datefmt(res.latestPre.created_at));
+        $("#latest-pre-link").attr("href", res.latestPre.html_url);
+        $("#latest-pre-span").css("display", "inline");
+    } else {
+        $("#latest-pre-span").css("display", "none");
+    }
 
     $("#latest-release-tag").html(res.latestRelease.tag_name);
     $("#latest-release-date").html(datefmt(res.latestRelease.created_at));
