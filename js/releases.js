@@ -21,22 +21,22 @@ function parseReleases(data) {
         return
     }
 
+    // Predict the next release based on the previous one.
+
     var nextReleaseAt, nextReleaseVer;
+    var parts = latestRelease.tag_name.split(".");
+    parts[2] = +parts[2] + 1;
+    nextReleaseVer = parts.join(".");
+    nextReleaseAt = tuesday(addDays(latestRelease.created_at, 14));
+
     if (latestPre.created_at > latestRelease.created_at) {
-        // We have a pre-release out for the next version.
+        // We have a pre-release out for the next version. See if that
+        // delays the release.
         nextReleaseVer = latestPre.tag_name.replace(/-rc.+/, '');
-        if (/-rc.1$/.exec(latestPre.tag_name)) {
-            nextReleaseAt = tuesday(addDays(latestPre.created_at, 12));
-        } else {
-            nextReleaseAt = tuesday(addDays(latestPre.created_at, 7));
+        var maybeNextReleaseAt = tuesday(addDays(latestPre.created_at, 7));
+        if (maybeNextReleaseAt > nextReleaseAt) {
+            nextReleaseAt = maybeNextReleaseAt;
         }
-    } else {
-        // The latest release is a normal full release.
-        latestPre = undefined; // it's an old pre-release
-        var parts = latestRelease.tag_name.split(".");
-        parts[2] = +parts[2] + 1;
-        nextReleaseVer = parts.join(".");
-        nextReleaseAt = tuesday(addDays(latestRelease.created_at, 14));
     }
 
     return {
