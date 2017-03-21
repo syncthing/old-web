@@ -37,6 +37,10 @@ function parseReleases(data) {
         if (maybeNextReleaseAt > nextReleaseAt) {
             nextReleaseAt = maybeNextReleaseAt;
         }
+    } else {
+        // The release is newer than the release candidate, so we don't
+        // currently have a release candidate out.
+        latestPre = undefined
     }
 
     return {
