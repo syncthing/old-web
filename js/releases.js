@@ -63,6 +63,7 @@ function setTags(res) {
 
     $("#latest-release-tag").html(res.latestRelease.tag_name);
     $("#latest-release-date").html(datefmt(res.latestRelease.created_at));
+    $("#latest-release-link").attr("href", res.latestRelease.html_url);
 
     $("#next-release-tag").html(res.nextReleaseVer);
     $("#next-release-date").html(datefmt(res.nextReleaseAt));
