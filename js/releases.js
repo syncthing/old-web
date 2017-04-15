@@ -33,7 +33,7 @@ function parseReleases(data) {
         // We have a pre-release out for the next version. See if that
         // delays the release.
         nextReleaseVer = latestPre.tag_name.replace(/-rc.+/, '');
-        var maybeNextReleaseAt = tuesday(addDays(latestPre.created_at, 7));
+        var maybeNextReleaseAt = tuesday(addDays(latestPre.created_at, 13));
         if (maybeNextReleaseAt > nextReleaseAt) {
             nextReleaseAt = maybeNextReleaseAt;
         }
