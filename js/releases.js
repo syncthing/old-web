@@ -27,7 +27,13 @@ function parseReleases(data) {
     var parts = latestRelease.tag_name.split(".");
     parts[2] = +parts[2] + 1;
     nextReleaseVer = parts.join(".");
+
     nextReleaseAt = nextMonthTuesday(latestRelease.created_at);
+    if (nextReleaseAt < new Date()) {
+        // The next release is supposedly in the past.
+        // Lets hope we release it next tuesday instead!
+        nextReleaseAt = nextTuesday(new Date());
+    }
 
     if (latestPre.created_at > latestRelease.created_at) {
         // We have a pre-release out for the next version. That's what's
@@ -69,6 +75,10 @@ function nextMonthTuesday(d) {
     d = new Date(d.getTime());
     d.setDate(1)
     d.setMonth(d.getMonth() + 1)
+    return nextTuesday(d);
+}
+
+function nextTuesday(d) {
     var days = 2 - d.getDay()
     if (days > 0) {
         d.setDate(d.getDate() + days)
