@@ -21,8 +21,8 @@ function appendDownloadLinks(data, tag) {
         } else if (os === 'windows') {
             os = 'Windows';
             order = 'B';
-        } else if (os === 'macosx') {
-            os = 'Mac OS X';
+        } else if (os === 'macos') {
+            os = 'macOS';
             order = 'C';
         } else if (os === 'freebsd') {
             os = 'FreeBSD';
