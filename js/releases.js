@@ -1,3 +1,24 @@
+function loadMilestones() {
+    $.getJSON('https://api.github.com/repos/syncthing/syncthing/milestones',function (data) {
+        var nextMilestone;
+        for (var i = 0; i < data.length; i++) {
+            var milestone = data[i];
+            milestone.due_on = new Date(milestone.due_on);
+            if (!nextMilestone || milestone.due_on < nextMilestone.due_on) {
+                nextMilestone = milestone;
+            }
+        }
+        if (nextMilestone) {
+            showNextRelease(nextMilestone);
+        }
+    });
+}
+
+function showNextRelease(res) {
+    $("#next-release-tag").html(res.title);
+    $("#next-release-date").html(datefmt(res.due_on));
+}
+
 function parseReleases(data) {
     var latestPre, latestRelease;
     for (var i = 0; i < data.length; i++) {
@@ -21,25 +42,7 @@ function parseReleases(data) {
         return
     }
 
-    // Predict the next release based on the previous one.
-
-    var nextReleaseAt, nextReleaseVer;
-    var parts = latestRelease.tag_name.split(".");
-    parts[2] = +parts[2] + 1;
-    nextReleaseVer = parts.join(".");
-
-    nextReleaseAt = nextMonthTuesday(latestRelease.created_at);
-    if (nextReleaseAt < new Date()) {
-        // The next release is supposedly in the past.
-        // Lets hope we release it next tuesday instead!
-        nextReleaseAt = nextTuesday(new Date());
-    }
-
-    if (latestPre.created_at > latestRelease.created_at) {
-        // We have a pre-release out for the next version. That's what's
-        // going to get released.
-        nextReleaseVer = latestPre.tag_name.replace(/-rc.+/, '');
-    } else {
+    if (latestPre.created_at < latestRelease.created_at) {
         // The release is newer than the release candidate, so we don't
         // currently have a release candidate out.
         latestPre = undefined
@@ -48,8 +51,6 @@ function parseReleases(data) {
     return {
         latestRelease: latestRelease,
         latestPre: latestPre,
-        nextReleaseVer: nextReleaseVer,
-        nextReleaseAt: nextReleaseAt,
     }
 }
 
@@ -66,9 +67,6 @@ function setTags(res) {
     $("#latest-release-tag").html(res.latestRelease.tag_name);
     $("#latest-release-date").html(datefmt(res.latestRelease.created_at));
     $("#latest-release-link").attr("href", res.latestRelease.html_url);
-
-    $("#next-release-tag").html(res.nextReleaseVer);
-    $("#next-release-date").html(datefmt(res.nextReleaseAt));
 }
 
 function nextMonthTuesday(d) {
