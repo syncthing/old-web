@@ -142,3 +142,7 @@ Breakpoint: viewport too narrow for two-column, go to one column (as per bootstr
 	padding: 0;
 	list-style: none;
 }
+
+.text-monospace {
+	font-family: 'Courier New', Courier, monospace;
+}

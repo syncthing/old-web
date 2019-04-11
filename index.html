@@ -260,37 +260,58 @@
                         all volunteer work &mdash; but in domain and hosting fees for the various servers we need to run
                         the operation such as discovery servers, build servers and this website. Your donations help
                         fund these costs.</p>
-                    <p>Donate securely using any major credit or debit card, processed by <a href="https://stripe.com/"
-                            target="_new">Stripe</a>.</p>
 
-                    <form name="donationForm" ng-if="!donation.failed && !donation.succeeded" class="form-inline">
-                        <div class="form-group">
-                            <label class="sr-only" for="amount">Donation Amount</label>
-                            <div class="input-group">
-                                <div class="input-group-addon input-lg">US$</div>
-                                <input type="number" class="form-control text-right input-lg" name="amount" id="amount"
-                                    placeholder="Amount" ng-model="donation.amount" min="1" max="1000" required>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="well">
+                                <p>Donate securely using any major credit or debit card, processed by <a
+                                        href="https://stripe.com/" target="_new">Stripe</a>.</p>
+
+                                <form name="donationForm" ng-if="!donation.failed && !donation.succeeded"
+                                    class="form-inline">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="amount">Donation Amount</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon input-lg">US$</div>
+                                            <input type="number" class="form-control text-right input-lg" name="amount"
+                                                id="amount" placeholder="Amount" ng-model="donation.amount" min="1"
+                                                max="1000" required>
+                                        </div>
+                                    </div>
+                                    <button ng-disabled="donationForm.amount.$invalid" type="submit"
+                                        class="btn btn-success btn-lg" ng-click="charge()">
+                                        <i class="fa fa-credit-card"></i> Donate
+                                    </button>
+                                </form>
+
+                                <div ng-if="donation.failed" class="alert alert-danger">
+                                    <h4>Woops :(</h4>
+                                    <p>Something went wrong processing your donation. The error is on our side, not
+                                        yours.
+                                        Your card
+                                        was not charged. Sorry for messing up!</p>
+                                </div>
+
+                                <div ng-if="donation.succeeded" class="alert alert-success">
+                                    <h4>Thank you!</h4>
+                                    <p>We will survive a little longer thanks to you! :)</p>
+                                </div>
                             </div>
                         </div>
-                        <button ng-disabled="donationForm.amount.$invalid" type="submit" class="btn btn-success btn-lg"
-                            ng-click="charge()">
-                            <i class="fa fa-credit-card"></i> Donate
-                        </button>
-                    </form>
 
-                    <div ng-if="donation.failed" class="alert alert-danger">
-                        <h4>Woops :(</h4>
-                        <p>Something went wrong processing your donation. The error is on our side, not yours. Your card
-                            was not charged. Sorry for messing up!</p>
-                    </div>
-
-                    <div ng-if="donation.succeeded" class="alert alert-success">
-                        <h4>Thank you!</h4>
-                        <p>We will survive a little longer thanks to you! :)</p>
+                        <div class="col-md-6">
+                            <div class="well">
+                                <p>If you would like to donate by direct transfer (SEPA) please use the account below.
+                                </p>
+                                <p class="text-monospace">&nbsp;BIC: ESSESESS<br>
+                                    IBAN: SE31 5000 0000 0569 0042 6883
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
             <hr />
 
             <div class="row ">
