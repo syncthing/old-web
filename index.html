@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="syncthingApp">
+
 <head>
     <title>Syncthing</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,9 +20,12 @@
     <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png" />
     <meta name="theme-color" content="#FFFFFF">
 
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/raleway.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <meta name="google-site-verification" content="YnpYvLrQHPxuSb2e0CqhZ9WU3yuET5BwGHczvoAMB9Y" />
@@ -30,18 +34,18 @@
     <link rel="dns-prefetch" href="//code.jquery.com" />
     <link rel="dns-prefetch" href="//www.coinbase.com" />
     <script>
-    (function(i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function() {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-    ga('create', 'UA-1060342-17', 'auto');
-    ga('send', 'pageview');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-1060342-17', 'auto');
+        ga('send', 'pageview');
     </script>
 </head>
 
@@ -57,8 +61,10 @@
                 <h1>
                     <img alt="Syncthing" id='syncthing-logo' title="Syncthing" src="images/logo-horizontal.svg" />
                 </h1>
-                <p class="under-logo">Syncthing replaces proprietary sync and cloud services with something open, trustworthy and decentralized. Your data is your data alone and
-                    <em>you</em> deserve to choose where it is stored, if it is shared with some third party and how it's transmitted over the Internet.</p>
+                <p class="under-logo">Syncthing replaces proprietary sync and cloud services with something open,
+                    trustworthy and decentralized. Your data is your data alone and
+                    <em>you</em> deserve to choose where it is stored, if it is shared with some third party and how
+                    it's transmitted over the Internet.</p>
             </div>
             <small class="attribution">
                 <a href="https://www.flickr.com/photos/iamjanosik/14286545284/">Photo</a> by Steve Janosic /
@@ -72,26 +78,37 @@
                 <div id="get-started" class="col-md-12">
                     <h2>
                         <i class="title fa fa-download"></i>Get Started</h2>
-                    <hr/>
+                    <hr />
                     <div class="row">
                         <div class="col-md-6">
                             <h3>Native GUIs & Integrations</h3>
                             <p>
                                 <ul>
-                                    <li><b>Windows</b> tray utility, filesystem watcher & launcher: <a href="https://github.com/canton7/SyncTrayzor/releases/latest">SyncTrayzor</a>
-                                    <li><b>macOS</b> application bundle: <a href="https://github.com/syncthing/syncthing-macos/releases/latest">syncthing-macos</a>
-                                    <li><b>Cross-platform</b> GUI wrapper: <a href="https://github.com/syncthing/syncthing-gtk/releases/latest">Syncthing-GTK</a>
+                                    <li><b>Windows</b> tray utility, filesystem watcher & launcher: <a
+                                            href="https://github.com/canton7/SyncTrayzor/releases/latest">SyncTrayzor</a>
+                                    <li><b>macOS</b> application bundle: <a
+                                            href="https://github.com/syncthing/syncthing-macos/releases/latest">syncthing-macos</a>
+                                    <li><b>Cross-platform</b> GUI wrapper: <a
+                                            href="https://github.com/syncthing/syncthing-gtk/releases/latest">Syncthing-GTK</a>
                                     <li>
                                         <b>Android</b> app:<br>
-                                        <a href="https://play.google.com/store/apps/details?id=com.nutomic.syncthingandroid"><img style="height:40px;" alt="Get it on Google Play" src="images/google-play-badge.png"></a>
-                                        <a href="https://f-droid.org/packages/com.nutomic.syncthingandroid/"><img style="height:40px;" alt="Get it on F-Droid" src="images/fdroid-badge.png"></a>
-                                        <br><small>See also <a href="https://github.com/syncthing/syncthing-android">Source and Issue Tracker</a> for the Android app</small>
+                                        <a
+                                            href="https://play.google.com/store/apps/details?id=com.nutomic.syncthingandroid"><img
+                                                style="height:40px;" alt="Get it on Google Play"
+                                                src="images/google-play-badge.png"></a>
+                                        <a href="https://f-droid.org/packages/com.nutomic.syncthingandroid/"><img
+                                                style="height:40px;" alt="Get it on F-Droid"
+                                                src="images/fdroid-badge.png"></a>
+                                        <br><small>See also <a
+                                                href="https://github.com/syncthing/syncthing-android">Source and Issue
+                                                Tracker</a> for the Android app</small>
                                 </ul>
                             </p>
                             <h3>Other Components and Contributions</h3>
                             <p>
                                 <ul>
-                                    <li>Many, many <a href="https://docs.syncthing.net/users/contrib.html">community contributions</a>.
+                                    <li>Many, many <a href="https://docs.syncthing.net/users/contrib.html">community
+                                            contributions</a>.
                                 </ul>
                             </p>
                         </div>
@@ -99,7 +116,8 @@
                             <h3>Syncthing Core (CLI &amp; Web UI)</h3>
                             <div id="static-download">
                                 <p id="download-button">
-                                    <a class="btn btn-primary btn-lg" href="https://github.com/syncthing/syncthing/releases/latest">
+                                    <a class="btn btn-primary btn-lg"
+                                        href="https://github.com/syncthing/syncthing/releases/latest">
                                         <i class="fa fa-github"></i>&nbsp;Download from GitHub</a>
                                 </p>
                             </div>
@@ -107,12 +125,17 @@
                                 <h4>Latest is <span id="latest-release-tag"></span></h4>
                                 <p id="download-links"></p>
                                 <p>
-                                    <span id="latest-pre-span">The current release candidate is <a id="latest-pre-link"><span id="latest-pre-tag"></span></a>, released <span id="latest-pre-date"></span>.</span>
-                                    The next release, <span id="next-release-tag"></span>, is expected <span id="next-release-date"></span>.
+                                    <span id="latest-pre-span">The current release candidate is <a
+                                            id="latest-pre-link"><span id="latest-pre-tag"></span></a>, released <span
+                                            id="latest-pre-date"></span>.</span>
+                                    The next release, <span id="next-release-tag"></span>, is expected <span
+                                        id="next-release-date"></span>.
                                 </p>
                             </div>
-                            <p>There are also <a href="https://apt.syncthing.net/">Debian / Ubuntu packages</a> available. Make sure to check out the
-                                <a href="https://docs.syncthing.net/intro/getting-started.html">Getting Started Guide</a> if you need help. Releases are signed as described on the
+                            <p>There are also <a href="https://apt.syncthing.net/">Debian / Ubuntu packages</a>
+                                available. Make sure to check out the
+                                <a href="https://docs.syncthing.net/intro/getting-started.html">Getting Started
+                                    Guide</a> if you need help. Releases are signed as described on the
                                 <a href="security.html">security</a> page.</p>
                         </div>
                     </div>
@@ -122,16 +145,22 @@
                 <div id="secure-private" class="col-sm-12">
                     <h2>
                         <i class="title fa fa-lock"></i>Secure &amp; Private</h2>
-                    <hr/>
+                    <hr />
                     <div class="row">
                         <div class="col-sm-8">
                             <ul>
                                 <li>
-                                    <strong>Private.</strong> None of your data is ever stored anywhere else other than on your computers. There is no central server that might be compromised, legally or illegally.</li>
+                                    <strong>Private.</strong> None of your data is ever stored anywhere else other than
+                                    on your computers. There is no central server that might be compromised, legally or
+                                    illegally.</li>
                                 <li>
-                                    <strong>Encrypted.</strong> All communication is secured using TLS. The encryption used includes perfect forward secrecy to prevent any eavesdropper from ever gaining access to your data.</li>
+                                    <strong>Encrypted.</strong> All communication is secured using TLS. The encryption
+                                    used includes perfect forward secrecy to prevent any eavesdropper from ever gaining
+                                    access to your data.</li>
                                 <li>
-                                    <strong>Authenticated.</strong> Every node is identified by a strong cryptographic certificate. Only nodes you have explicitly allowed can connect to your cluster.</li>
+                                    <strong>Authenticated.</strong> Every node is identified by a strong cryptographic
+                                    certificate. Only nodes you have explicitly allowed can connect to your cluster.
+                                </li>
                             </ul>
                         </div>
                         <div class="col-sm-4">
@@ -144,30 +173,40 @@
                 <div id="open-development" class="col-sm-12">
                     <h2>
                         <i class="title fa fa-code-fork"></i>Open Development</h2>
-                    <hr/>
+                    <hr />
                     <div class="row">
                         <div class="col-sm-8">
                             <p></p>
                             <ul>
                                 <li>
-                                    <strong>Open Discourse.</strong> Development and usage is always open for discussion.
+                                    <strong>Open Discourse.</strong> Development and usage is always open for
+                                    discussion.
                                     <br />
-                                    <a target="_blank" href="https://forum.syncthing.net/">Syncthing Discussion Forum</a>
+                                    <a target="_blank" href="https://forum.syncthing.net/">Syncthing Discussion
+                                        Forum</a>
                                 </li>
                                 <li>
-                                    <strong>Open Source.</strong> All source code is available on GitHub &mdash; what you see is what you get, there is no hidden funny business.
+                                    <strong>Open Source.</strong> All source code is available on GitHub &mdash; what
+                                    you see is what you get, there is no hidden funny business.
                                     <br />
-                                    <a target="_blank" href="https://github.com/syncthing/syncthing/tree/master">Syncthing Source Code</a>
+                                    <a target="_blank"
+                                        href="https://github.com/syncthing/syncthing/tree/master">Syncthing Source
+                                        Code</a>
                                 </li>
                                 <li>
-                                    <strong>Open Protocol.</strong> The protocol is a documented standard &mdash; no hidden magic.
+                                    <strong>Open Protocol.</strong> The protocol is a documented standard &mdash; no
+                                    hidden magic.
                                     <br />
-                                    <a target="_blank" href="https://docs.syncthing.net/specs/bep-v1.html">Syncthing Protocol Definition</a>
+                                    <a target="_blank" href="https://docs.syncthing.net/specs/bep-v1.html">Syncthing
+                                        Protocol Definition</a>
                                 </li>
                                 <li>
-                                    <strong>Open Development.</strong> Any bugs found are immediately visible for anyone to browse &mdash; no hidden flaws.
+                                    <strong>Open Development.</strong> Any bugs found are immediately visible for anyone
+                                    to browse &mdash; no hidden flaws.
                                     <br />
-                                    <a target="_blank" href="https://github.com/syncthing/syncthing/issues?state=open">Syncthing Issue Tracker</a>
+                                    <a target="_blank"
+                                        href="https://github.com/syncthing/syncthing/issues?state=open">Syncthing Issue
+                                        Tracker</a>
                                 </li>
                             </ul>
                         </div>
@@ -181,52 +220,68 @@
                 <div id="easy-to-use" class="col-sm-12">
                     <h2>
                         <i class="title fa fa-users"></i>Easy to Use</h2>
-                    <hr/>
+                    <hr />
                     <div class="row">
                         <div class="col-sm-8">
-                            <p>Syncthing is still in development, although a large number of features have already been implemented:</p>
+                            <p>Syncthing is still in development, although a large number of features have already been
+                                implemented:</p>
                             <ul>
                                 <li>
-                                    <strong>Web GUI.</strong> Configure and monitor Syncthing via a responsive and powerful interface accessible via your browser.</li>
+                                    <strong>Web GUI.</strong> Configure and monitor Syncthing via a responsive and
+                                    powerful interface accessible via your browser.</li>
                                 <li>
-                                    <strong>Portable.</strong> Works on Mac OS X, Windows, Linux, FreeBSD, Solaris and OpenBSD. Run it on your desktop computers and synchronize them with your server for backup.</li>
+                                    <strong>Portable.</strong> Works on Mac OS X, Windows, Linux, FreeBSD, Solaris and
+                                    OpenBSD. Run it on your desktop computers and synchronize them with your server for
+                                    backup.</li>
                                 <li>
-                                    <strong>Simple.</strong> Syncthing doesn't need IP addresses or advanced configuration: it just works, over LAN and over the Internet. Every machine is identified by an ID. Just give your ID to your friends, share a folder and watch: UPnP will do if you don't want to port forward or you don't know how.</li>
+                                    <strong>Simple.</strong> Syncthing doesn't need IP addresses or advanced
+                                    configuration: it just works, over LAN and over the Internet. Every machine is
+                                    identified by an ID. Just give your ID to your friends, share a folder and watch:
+                                    UPnP will do if you don't want to port forward or you don't know how.</li>
                                 <li>
-                                    <strong>Powerful.</strong> Synchronize as many folders as you need with different people.</li>
+                                    <strong>Powerful.</strong> Synchronize as many folders as you need with different
+                                    people.</li>
                             </ul>
                         </div>
                         <div class="col-sm-4">
-                            <img src="images/screenshot-720.jpg" alt="screenshot of syncthing" width="360" class="img-thumbnail">
+                            <img src="images/screenshot-720.jpg" alt="screenshot of syncthing" width="360"
+                                class="img-thumbnail">
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="row">
-                <div id="donate" class="col-md-12"  ng-controller="SyncthingCtrl">
+                <div id="donate" class="col-md-12" ng-controller="SyncthingCtrl">
                     <h2><i class="title fa fa-heart"></i>Donate</h2>
-                    <hr/>
+                    <hr />
 
-                    <p>Developing Syncthing costs money. Currently not as compensation for the developers &mdash; that's all volunteer work &mdash; but in domain and hosting fees for the various servers we need to run the operation such as discovery servers, build servers and this website. Your donations help fund these costs.</p>
-                    <p>Donate securely using any major credit or debit card, processed by <a href="https://stripe.com/" target="_new">Stripe</a>.</p>
+                    <p>Developing Syncthing costs money. Currently not as compensation for the developers &mdash; that's
+                        all volunteer work &mdash; but in domain and hosting fees for the various servers we need to run
+                        the operation such as discovery servers, build servers and this website. Your donations help
+                        fund these costs.</p>
+                    <p>Donate securely using any major credit or debit card, processed by <a href="https://stripe.com/"
+                            target="_new">Stripe</a>.</p>
 
                     <form name="donationForm" ng-if="!donation.failed && !donation.succeeded" class="form-inline">
-                      <div class="form-group">
-                        <label class="sr-only" for="amount">Donation Amount</label>
-                        <div class="input-group">
-                          <div class="input-group-addon input-lg">US$</div>
-                          <input type="number" class="form-control text-right input-lg" name="amount" id="amount" placeholder="Amount" ng-model="donation.amount" min="1" max="1000" required>
+                        <div class="form-group">
+                            <label class="sr-only" for="amount">Donation Amount</label>
+                            <div class="input-group">
+                                <div class="input-group-addon input-lg">US$</div>
+                                <input type="number" class="form-control text-right input-lg" name="amount" id="amount"
+                                    placeholder="Amount" ng-model="donation.amount" min="1" max="1000" required>
+                            </div>
                         </div>
-                      </div>
-                      <button ng-disabled="donationForm.amount.$invalid" type="submit" class="btn btn-success btn-lg" ng-click="charge()">
-                        <i class="fa fa-credit-card"></i> Donate
-                      </button>
+                        <button ng-disabled="donationForm.amount.$invalid" type="submit" class="btn btn-success btn-lg"
+                            ng-click="charge()">
+                            <i class="fa fa-credit-card"></i> Donate
+                        </button>
                     </form>
 
                     <div ng-if="donation.failed" class="alert alert-danger">
                         <h4>Woops :(</h4>
-                        <p>Something went wrong processing your donation. The error is on our side, not yours. Your card was not charged. Sorry for messing up!</p>
+                        <p>Something went wrong processing your donation. The error is on our side, not yours. Your card
+                            was not charged. Sorry for messing up!</p>
                     </div>
 
                     <div ng-if="donation.succeeded" class="alert alert-success">
@@ -236,19 +291,21 @@
                 </div>
             </div>
 
-            <hr/>
+            <hr />
 
             <div class="row ">
                 <div class="col-md-12">
                     <div class="col-md-6 col-md-offset-3">
                         <h3 class="text-muted text-center">Sponsor</h3>
-                        <p class="text-center"><a href="https://kastelo.net/"><img src="images/kastelo.svg" class="sponsor-logo"></a></p>
-                        <p><a href="https://kastelo.net/">Kastelo</a> is an open source friendly consulting firm sponsoring Syncthing with development resources.</p>
+                        <p class="text-center"><a href="https://kastelo.net/"><img src="images/kastelo.svg"
+                                    class="sponsor-logo"></a></p>
+                        <p><a href="https://kastelo.net/">Kastelo</a> is an open source friendly consulting firm
+                            sponsoring Syncthing with development resources.</p>
                     </div>
                 </div>
             </div>
 
-            <hr/>
+            <hr />
 
             <div class="row">
                 <div class="col-sm-4">
@@ -286,31 +343,36 @@
                 </div>
             </div>
 
-            <hr/>
+            <hr />
 
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <iframe src="https://ghbtns.com/github-btn.html?user=syncthing&repo=syncthing&type=star&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
-                    <iframe src="https://ghbtns.com/github-btn.html?user=syncthing&repo=syncthing&type=fork&count=true&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+                    <iframe
+                        src="https://ghbtns.com/github-btn.html?user=syncthing&repo=syncthing&type=star&count=true&size=large"
+                        allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
+                    <iframe
+                        src="https://ghbtns.com/github-btn.html?user=syncthing&repo=syncthing&type=fork&count=true&size=large"
+                        allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe>
                 </div>
             </div>
         </div>
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js"></script>
     <script type="text/javascript" src="https://checkout.stripe.com/checkout.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/releases.js"></script>
     <script type="text/javascript" src="js/downloads.js"></script>
     <script type="text/javascript">
-    $.getJSON('https://upgrades.syncthing.net/meta.json',function (data) {
-        var res = parseReleases(data);
-        appendDownloadLinks(res.latestRelease, '#download-links')
-        setTags(res);
-        $('#dynamic-downloads').css('display', 'block');
-        $('#static-download').hide();
-    })
-    loadMilestones();
+        $.getJSON('https://upgrades.syncthing.net/meta.json', function (data) {
+            var res = parseReleases(data);
+            appendDownloadLinks(res.latestRelease, '#download-links')
+            setTags(res);
+            $('#dynamic-downloads').css('display', 'block');
+            $('#static-download').hide();
+        })
+        loadMilestones();
     </script>
 
 </body>
