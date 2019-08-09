@@ -1,5 +1,6 @@
 html,
-body {
+body,
+blockquote p {
 	font-size: 1em;
 }
 
@@ -145,4 +146,9 @@ Breakpoint: viewport too narrow for two-column, go to one column (as per bootstr
 
 .text-monospace {
 	font-family: 'Courier New', Courier, monospace;
+}
+
+blockquote {
+	border-left: 6px solid #eee;
+	padding-left: 12px;
 }
