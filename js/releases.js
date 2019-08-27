@@ -23,7 +23,6 @@ function parseReleases(data) {
     var latestPre, latestRelease;
     for (var i = 0; i < data.length; i++) {
         var release = data[i];
-        release.created_at = new Date(release.created_at)
 
         if (!latestPre && release.prerelease) {
             latestPre = release;
@@ -42,7 +41,8 @@ function parseReleases(data) {
         return
     }
 
-    if (latestPre.created_at < latestRelease.created_at) {
+    // Quick and dirty version comparison... Will usually be mostly right.
+    if (latestPre.tag_name < latestRelease.tag_name) {
         // The release is newer than the release candidate, so we don't
         // currently have a release candidate out.
         latestPre = undefined
@@ -57,7 +57,6 @@ function parseReleases(data) {
 function setTags(res) {
     if (res.latestPre) {
         $("#latest-pre-tag").html(res.latestPre.tag_name);
-        $("#latest-pre-date").html(datefmt(res.latestPre.created_at));
         $("#latest-pre-link").attr("href", res.latestPre.html_url);
         $("#latest-pre-span").css("display", "inline");
     } else {
@@ -65,7 +64,6 @@ function setTags(res) {
     }
 
     $("#latest-release-tag").html(res.latestRelease.tag_name);
-    $("#latest-release-date").html(datefmt(res.latestRelease.created_at));
     $("#latest-release-link").attr("href", res.latestRelease.html_url);
 }
 
