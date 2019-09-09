@@ -42,7 +42,7 @@ function parseReleases(data) {
     }
 
     // Quick and dirty version comparison... Will usually be mostly right.
-    if (latestPre.tag_name < latestRelease.tag_name) {
+    if (latestPre && latestPre.tag_name < latestRelease.tag_name) {
         // The release is newer than the release candidate, so we don't
         // currently have a release candidate out.
         latestPre = undefined
