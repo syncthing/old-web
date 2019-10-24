@@ -70,7 +70,7 @@ li {
 }
 
 .sponsor-logo {
-	width: 75%;
+	max-width: 250px;
 }
 
 /* github ribbon */

@@ -253,75 +253,8 @@
                     by the <a href="https://www.syncthing.org/">Syncthing
                     Foundation</a>.</p>
 
-
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>Donate securely using any major credit or debit card, processed by <a
-                                    href="https://stripe.com/" target="_new">Stripe</a>.</p>
-
-                            <div class="form-inline">
-                                <div class="form-group"></div>
-
-                                <label class="sr-only" for="amount">Donation Amount</label>
-                                <div class="input-group">
-                                    <div class="input-group-addon input-lg">EUR</div>
-                                    <input type="number" class="form-control text-right input-lg" name="amount"
-                                        id="donation-amount" placeholder="Amount" min="1" max="1000" value="20"
-                                        required>
-                                </div>
-
-                                <button class="btn btn-success btn-lg" id="donate-once-button" role="link"><i
-                                        class="fa fa-credit-card"></i> Donate Once
-                                </button>
-                                <button class="btn btn-primary btn-lg" id="donate-monthly-button" role="link"><i
-                                        class="fa fa-refresh"></i> Donate Monthly
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="error-message"></div>
-
-                    <script type="text/javascript" src="https://js.stripe.com/v3"></script>
-                    <script>
-                        var stripe = Stripe('pk_live_7SJOzG0qoGnIjMHbEOnnhEce');
-                        var oneTimeSKU = 'sku_FZzomJKEpaGTVk';
-                        var recurringSKU = 'plan_FZzqRxfQtAx34O';
-                        // var stripe = Stripe('pk_test_U7UN5bE4K6xwGA1nL6kjBfib');
-                        // var oneTimeSKU = 'sku_FZzIBb9nkPEwrd';
-                        // var recurringSKU = 'plan_FZzalXk9lFd7sm';
-
-                        document.getElementById('donate-once-button').addEventListener('click', function () {
-                            var amount = +(document.getElementById('donation-amount').value);
-                            stripe.redirectToCheckout({
-                                items: [{ sku: oneTimeSKU, quantity: amount }],
-                                successUrl: 'https://syncthing.net/success.html',
-                                cancelUrl: 'https://syncthing.net/canceled.html',
-                                submitType: 'donate',
-                            })
-                                .then(function (result) {
-                                    if (result.error) {
-                                        var displayError = document.getElementById('error-message');
-                                        displayError.textContent = result.error.message;
-                                    }
-                                });
-                        });
-
-                        document.getElementById('donate-monthly-button').addEventListener('click', function () {
-                            var amount = +(document.getElementById('donation-amount').value);
-                            stripe.redirectToCheckout({
-                                items: [{ plan: recurringSKU, quantity: amount }],
-                                successUrl: 'https://syncthing.net/success-recurring.html',
-                                cancelUrl: 'https://syncthing.net/canceled.html',
-                            })
-                                .then(function (result) {
-                                    if (result.error) {
-                                        var displayError = document.getElementById('error-message');
-                                        displayError.textContent = result.error.message;
-                                    }
-                                });
-                        });
-                    </script>
+                    <a class="btn btn-success btn-lg" role="link" href="https://www.syncthing.org/donations/"><i
+                        class="fa fa-credit-card"></i>&ensp;Donate</a>
                 </div>
             </div>
 
@@ -330,7 +263,7 @@
             <div class="row ">
                 <div class="col-md-12">
                     <div class="col-md-6 col-md-offset-3">
-                        <p class="text-center"><a href="https://kastelo.net/"><img src="images/kastelo.svg"
+                        <p class="text-center"><a href="https://kastelo.net/"><img src="https://kastelo.net/img/logo.svg"
                                     class="sponsor-logo"></a></p>
                         <p class="text-center"><a href="https://kastelo.net/">Kastelo</a> provides <a
                                 href="https://kastelo.net/stes/">commercial support</a> for Syncthing and
